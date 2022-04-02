@@ -1,0 +1,88 @@
+{% extends "layouts/base.html" %}
+
+y{% block title %} UI Panels {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="col-md-12 ml-auto mr-auto">
+<img src="/static/assets/banners/rotacion.jpg" alt="Girl in a jacket" width="100%">
+</div>
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">Rotación</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+         <!--
+	<li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociograma" role="tablist">
+              <i class="material-icons">place</i> Simulador Reclutamiento
+            </a>
+          </li>
+         -->
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#dash" role="tablist">
+              <i class="material-icons">insights</i> Análisis de reclutamiento
+            </a>
+          </li>
+	<!--
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#model" role="tablist">
+              <i class="material-icons">insights</i> Talentmap - Modelo
+            </a>
+          </li>
+	-->
+	</ul>
+        <div class="tab-content tab-space tab-subcategories">
+	<!--
+          <div class="tab-pane" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Simulador reclutamiento</h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe kumu
+                <a href="http://ec2-3-15-228-102.us-east-2.compute.amazonaws.com/simulador/axo/" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Lauunch Simulador</button>
+                </a>
+		<iframe src="http://ec2-3-15-228-102.us-east-2.compute.amazonaws.com/simulador/axo/" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+	   -->
+          <div class="tab-pane active show" id="dash">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"></h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe Powe bi-->
+		<iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiM2RjMDJiNWEtYTQzZi00YzY3LWE2OGMtZjM3MzdlYzBjNzdhIiwidCI6ImZmNjRmZWUwLWZmZWYtNGQxOS1iNzM2LTJjNDA4YzA3ODgzMyJ9" frameborder="0" allowFullScreen="true"></iframe>
+              </div>
+            </div>
+          </div>
+	<!--
+          <div class="tab-pane" id="model">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Modelo Predictivo</h4>
+              </div>
+              <div class="card-body">
+                <a href="/static/assets/webslides-latest/demos/modelo.html" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Launch</button>
+                </a>
+		<!-- iframe Powe bi
+		<iframe width="100%" height="1000" src="/static/assets/webslides-latest/demos/modelo.html" frameborder="0" allowFullScreen="true"></iframe>
+              </div>
+            </div>
+          </div>
+
+	-->
+        </div>
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

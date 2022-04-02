@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="/static/assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="/static/assets/demo/demo.css" rel="stylesheet" />
+<style>
+.boxc {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  clear: both;
+}
+
+.redc {
+  background-color: red;
+}
+
+.greenc {
+  background-color: green;
+}
+
+.bluec {
+  background-color: blue;
+}
+
+</style>
+</head>
+<body>
+<div class="container-fluid">
+
+<div class="row">
+    <div class="col-md-12">
+      <div class="card card-nav-tabs">
+        <div class="card-header card-header-info">
+          <h3 class="card-title">Recursos Humanos</h3>
+       </div>
+       <div class="card-body">
+	      {{ rh|safe }}
+        </div>
+        </div>
+      </div>
+    </div>
+
+<div class="row">
+    <div class="col-md-12">
+      <div class="card card-nav-tabs">
+        <div class="card-header card-header-info">
+          <h3 class="card-title">Comercial</h3>
+       </div>
+       <div class="card-body">
+		{{ comer|safe}}
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>

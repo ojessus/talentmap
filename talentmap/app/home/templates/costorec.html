@@ -1,0 +1,91 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Panels {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="col-md-12 ml-auto mr-auto">
+<img src="/static/assets/banners/rotacion.jpg" alt="Girl in a jacket" width="100%">
+</div>
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">Costo de Reclutamiento</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-danger nav-pills-icons justify-content-center" role="tablist">
+
+	<li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociograma" role="tablist">
+              <i class="material-icons">place</i> Simulador por Puesto <p>Costo directo<p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#dash" role="tablist">
+              <i class="material-icons">insights</i> Simulador Global
+            </a>
+          </li>
+	
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#model" role="tablist">
+              <i class="material-icons">insights</i> A.R.O.
+            </a>
+          </li>
+	
+	</ul>
+        <div class="tab-content tab-space tab-subcategories">
+
+          <div class="tab-pane" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"></h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe kumu -->
+                <a href="https://talentmap.mattertalent.com//simulador/axo/" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Launch Simulador</button>
+                </a>
+		<iframe src="https://talentmap.mattertalent.com//simulador/axo/" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane active show" id="dash">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"></h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe kumu -->
+                <a href="https://talentmap.mattertalent.com/simulador/axo/glob" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Launch Simulador</button>
+                </a>
+		<iframe src="https://talentmap.mattertalent.com/simulador/axo/glob" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+
+            </div>
+          </div>
+	
+          <div class="tab-pane" id="model">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Sociometría</h4>
+              </div>
+              <div class="card-body">
+                <a href="https://embed.kumu.io/cc4acc06204922025fb77013feb9720c" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Launch</button>
+                </a>
+		<!-- iframe Powe bi-->
+		<iframe width="100%" height="600" src="https://embed.kumu.io/cc4acc06204922025fb77013feb9720c" frameborder="0" allowFullScreen="true"></iframe>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

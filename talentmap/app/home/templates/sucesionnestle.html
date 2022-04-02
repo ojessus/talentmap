@@ -1,0 +1,87 @@
+{% extends "layouts/base.html" %}
+{% block title %} UI Panels {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="col-md-12 ml-auto mr-auto">
+<img src="/static/assets/banners/sucesion.jpg" alt="Girl in a jacket" width="100%">
+</div>
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">Sucesión</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociograma" role="tablist">
+              <i class="material-icons">place</i> Top 50 Todos
+            </a>
+          </li>
+
+	  <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#dash" role="tablist">
+              <i class="material-icons">insights</i> Top 50 Lideres
+            </a>
+          </li>
+	  <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#db" role="tablist">
+              <i class="material-icons">search</i> Buscador de talento
+            </a>
+          </li>
+	</ul>
+
+        <div class="tab-content tab-space tab-subcategories">
+
+
+          <div class="tab-pane" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Todos</h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe kumu-->
+                <a href="https://talentmap.mattertalent.com/simulador/nestle/todos/" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Launch</button>
+                </a>
+		<iframe src="https://talentmap.mattertalent.com/simulador/nestle/todos/" width="100%" height="800" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane active show" id="dash">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">lideres</h4>
+              </div>
+              <div class="card-body">
+                <a href="https://talentmap.mattertalent.com/simulador/nestle/lideres/" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Launch</button>
+                </a>
+
+	       <iframe width="100%"  height="800" src="https://talentmap.mattertalent.com/simulador/nestle/lideres/" frameborder="0" allowFullScreen="true"></iframe>
+              </div>
+            </div>
+          </div>
+
+ 	 <div class="tab-pane" id="db">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Buscador de Talento</h4>
+              </div>
+              <div class="card-body">
+		<a href="https://talentmap.mattertalent.com/simulador/nestle/ids" target="_blank">
+                <button type="button" class="btn btn-deafult btn-block">Launch</button>
+		</a>
+	       <iframe width="100%"  height="800" src="https://talentmap.mattertalent.com/simulador/nestle/ids" frameborder="0" allowFullScreen="true"></iframe>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

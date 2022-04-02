@@ -1,0 +1,112 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Panels {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="col-md-12 ml-auto mr-auto">
+<img src="/static/assets/banners/sucesion.jpg" alt="Girl in a jacket" width="100%">
+</div>
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">Sucesión</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociograma" role="tablist">
+              <i class="material-icons">place</i> A.R.O.
+            </a>
+          </li>
+        
+	  <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#dash" role="tablist">
+              <i class="material-icons">insights</i> TalentMap
+            </a>
+          </li>
+
+	  <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#db" role="tablist">
+              <i class="material-icons">storage</i> Bases de Datos
+            </a>
+          </li>
+
+
+	  <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#sim" role="tablist">
+              <i class="material-icons">insights</i> Colaboradores
+            </a>
+          </li>
+	
+	</ul>
+
+        <div class="tab-content tab-space tab-subcategories">
+
+
+          <div class="tab-pane" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">A.R.0.</h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe kumu-->
+                <a href="https://embed.kumu.io/06ddc8666f8cfd6173319225d146d55c" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Launch TalentMap</button>
+                </a>
+		<iframe src="https://embed.kumu.io/06ddc8666f8cfd6173319225d146d55c" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tab-pane active show" id="sim">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Colaboradores clase mundial</h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe kumu-->
+                <a href="https://talentmap.mattertalent.com/simulador/kam/" target="_blank">
+                	<button type="button" class="btn btn-default btn-block">Launch</button>
+                </a>
+		<iframe src="https://talentmap.mattertalent.com/simulador/kam/" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tab-pane" id="dash">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">TalenMap</h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe Powe bi-->
+		<iframe width="100%" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiOWFkMzg4MTgtNzhlNi00YmEyLTk0ZjctMTE1ODVkMjg1YjM1IiwidCI6ImZmNjRmZWUwLWZmZWYtNGQxOS1iNzM2LTJjNDA4YzA3ODgzMyJ9&pageName=ReportSection " frameborder="0" allowFullScreen="true"></iframe>
+              </div>
+            </div>
+          </div>
+
+ 	 <div class="tab-pane" id="db">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Base de Datos Sucesión</h4>
+              </div>
+              <div class="card-body">
+                <!-- Buttons -->
+		<a href="static/assets/demo/base_sucesion.xlsx" download>
+                <button type="button" class="btn btn-success btn-block">Base de datos de Sucesión</button>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

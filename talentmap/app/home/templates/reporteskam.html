@@ -1,0 +1,137 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} KAM {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">Entregables</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#sociograma" role="tablist">
+              <i class="material-icons">store</i> Empresa
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#area" role="tablist">
+              <i class="material-icons">horizontal_split</i> Áreas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#dash" role="tablist">
+              <i class="material-icons">people</i> Personas
+            </a>
+          </li>
+	</ul>
+        <div class="tab-content tab-space tab-subcategories">
+          <div class="tab-pane active show" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Empresa</h4>
+              </div>
+              <div class="card-body">
+		<a href="static/assets/demo/reporte_topografía_KAM_Entrega.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Reporte empresa</button>
+		</a>
+		<a href="static/assets/docs/presentación a directores final.pdf " download>
+		<button type="button" class="btn btn-success btn-block">Reporte directores</button>
+		</a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="area">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Radares por Área</h4>
+              </div>
+              <div class="card-body">
+		<a href="static/assets/demo/AreasSOQ.zip" download>
+		<button type="button" class="btn btn-success btn-block">Radares SOQ</button>
+		</a>
+		<a href="static/assets/demo/AREASPEER.zip" download>
+		<button type="button" class="btn btn-success btn-block">Radares PEER</button>
+		</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Organigramas por Área</h4>
+              </div>
+              <div class="card-body">
+		<a href="static/assets/docs/Administración y finanzas.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Administración y Finanzas</button>
+		</a>
+		<a href="static/assets/docs/BPO.pdf" download>
+		<button type="button" class="btn btn-success btn-block">BPO</button>
+		</a>
+		<a href="static/assets/docs/Direccion Comercial.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Dirección Comercial</button>
+		</a>
+		<a href="static/assets/docs/Direccion servicio al cliente.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Dirección Servicio al Cliente</button>
+		</a>
+		<a href="static/assets/docs/Dirección general.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Dirección General</button>
+		</a>
+		<a href="static/assets/docs/Innovación y producto.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Innovación y Producto</button>
+		</a>
+		<a href="static/assets/docs/OPERACION INFRAESTUCTURA Y VIRTUALIZACION ORACLE.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Operación Infraestructura y Virtualización ORACLE </button>
+		</a>
+		<a href="static/assets/docs/direccion bussines development.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Dirección Bussines Development</button>
+		</a>
+		<a href="static/assets/docs/operacion de productos financieros .pdf" download>
+		<button type="button" class="btn btn-success btn-block">Operación de Productos Financieros</button>
+		</a>
+		<a href="static/assets/docs/operacion e infraestructura .pdf" download>
+		<button type="button" class="btn btn-success btn-block">Operación e Infraestructura</button>
+		</a>
+		<a href="static/assets/docs/operacion peoplesoft .pdf" download>
+		<button type="button" class="btn btn-success btn-block">Operación Peoplesoft</button>
+		</a>
+		<a href="static/assets/docs/subdireccion SAP ecommere automatica.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Subdirección SAP Ecommere Automatica</button>
+		</a>
+              </div>
+            </div>
+	 </div>
+         <div class="tab-pane" id="dash">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Persona</h4>
+              </div>
+              <div class="card-body">
+		<a href="static/assets/docs/Reportes.zip" download>
+		<button type="button" class="btn btn-success btn-block">Reportes Individuales</button>
+		</a>		
+              </div>
+            </div>
+	  
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Listas</h4>
+              </div>
+              <div class="card-body">
+		<a href="static/assets/docs/DimensionesCombinadasv1.1.xlsx" download>
+		<button type="button" class="btn btn-success btn-block">Lista de Dimensiones y Roles</button>
+		</a>		
+		<a href="static/assets/docs/KAM_INFLUENCERS_MEDIOS.xlsx" download>
+		<button type="button" class="btn btn-success btn-block">Lista de Influencers Medios</button>
+		</a>		
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

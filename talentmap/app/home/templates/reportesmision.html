@@ -1,0 +1,78 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} KAM {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="col-md-12 ml-auto mr-auto">
+<img src="/static/assets/banners/entregables.jpg" alt="Girl in a jacket" width="100%">
+</div>
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">Entregables</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#sociograma" role="tablist">
+              <i class="material-icons">store</i> Empresa
+            </a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#area" role="tablist">
+              <i class="material-icons">horizontal_split</i> SCH
+            </a>
+          </li>
+          -->
+	</ul>
+        <div class="tab-content tab-space tab-subcategories">
+          <div class="tab-pane active show" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Reportes</h4>
+              </div>
+              <div class="card-body">
+		<a href="static/assets/docs/CALIBRADOR SELECCIÓN DE PERSONAL MISIÓN revision S_E.docx" download>
+		<button type="button" class="btn btn-default btn-block">CALIBRADOR SELECCIÓN DE PERSONAL MISIÓN</button>
+		</a>
+		<a href="static/assets/docs/Encuesta_Reclutamiento_LaMision_Allende2.xlsx" download>
+		<button type="button" class="btn btn-default btn-block">Encuesta de Reclutamiento La Misión Allende</button>
+		</a>
+		<a href="static/assets/docs/LA Mision_negativos.xlsx" download>
+		<button type="button" class="btn btn-default btn-block">Desviadores Negativos</button>
+		</a>
+		<a href="static/assets/docs/Programa de liderazgo.pptx" download>
+		<button type="button" class="btn btn-default btn-block">Programa de liderazgo</button>
+		</a>
+		<a href="static/assets/docs/reporte de ideas La Mision.pptx" download>
+		<button type="button" class="btn btn-default btn-block">Reporte de ideas La Mision</button>
+		</a>
+		<a href="static/assets/docs/Reporte ejecutivo.pptx" download>
+		<button type="button" class="btn btn-default btn-block">Reporte ejecutivo</button>
+		</a>
+              </div>
+            </div>
+          </div>
+         <!--
+          <div class="tab-pane" id="area">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Reporte SCH</h4>
+              </div>
+              <div class="card-body">
+		<a href="static/assets/docs/Reporte_Hallazgos_AXO_SCH_Final.pptx" download>
+		<button type="button" class="btn btn-success btn-block">Reporte Hallazgos SCH FINAL</button>
+		</a>
+              </div>
+            </div>
+        -->
+
+	 </div>        
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

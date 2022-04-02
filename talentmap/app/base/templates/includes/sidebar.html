@@ -1,0 +1,919 @@
+{% if current_user.username in ['kam','kam1','kam2','kam3']%}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+           <a target="_blank" rel="noopener noreferrer"
+              href="https://mattertalent.com/" class="simple-text logo-mini">
+        <div class="photo">
+          <img src="/static/assets/img/logo_mattertalent.png" width="40" />
+        </div>
+        </a>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://mattertalent.com/" class="simple-text logo-normal">
+          MATTERTALENT
+        </a></div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="photo">
+            <img src="/static/assets/img/faces/logokio.png" />
+          </div>
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                KAM
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+           <li class="nav-item {% if 'reporteskam' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/reporteskam.html">
+              <i class="material-icons">report</i>
+              <p> Entregables </p>
+            </a>
+          </li>
+           <li class="nav-item {% if 'accioneskam' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/accioneskam.html">
+              <i class="material-icons">check_box</i>
+              <p> Acciones Concretas </p>
+            </a>
+          </li>
+
+          <!--  <li class="nav-item {% if 'creatividadkam' in segment %} active {% endif %}">
+            <a class="nav-link" href="/creatividadkam.html">
+              <i class="material-icons">flare</i>
+	      <p>Creatividad</p>
+            </a> -->
+
+	  <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+              <i class="material-icons">flare</i>
+              <p> Creatividad
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/creatividadkamd.html">
+                    <span class="sidebar-mini"> D </span>
+                    <span class="sidebar-normal"> Dashboards </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/creatividadkam.html">
+                    <span class="sidebar-mini"> T </span>
+                    <span class="sidebar-normal"> TalentMap </span>
+                  </a>
+                </li> 
+	     </ul>
+	   </div>
+          </li>
+
+   <li class="nav-item {% if 'simkam' in segment %} active {% endif %}">
+            <a class="nav-link" href="/simkam.html">
+              <i class="material-icons">people</i>
+	      <p>Colaboradores</p>
+            </a> 
+
+   
+
+
+
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+
+{% elif current_user.username in ['grupoaxo','axoguest'] %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+           <a target="_blank" rel="noopener noreferrer"
+              href="https://mattertalent.com/" class="simple-text logo-mini">
+        <div class="photo">
+          <img src="/static/assets/img/logo_mattertalent.png" width="40" />
+        </div>
+        </a>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://mattertalent.com/" class="simple-text logo-normal">
+          MATTERTALENT
+        </a></div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                <img src="/static/assets/img/grupoaxoc.png" width="100%"/>
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+         {%if current_user.username in ['grupoaxo'] %}
+           <li class="nav-item {% if 'reportesaxo' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/reportesaxo.html">
+	     <i>
+                <img src="/static/assets/icons/entregables.png" width="100%"/>
+              </i>
+              <p> Entregables </p>
+            </a>
+          </li>
+
+     
+	<li class="nav-item {% if 'integracion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/integracion.html">
+	      <i>
+                <img src="/static/assets/icons/integraciondedatos.png" width="100%"/>
+              </i>
+              <p>Rotación Full Price</p>
+            </a>
+          </li>
+     
+	  <li class="nav-item {% if 'Permanenciaaxo' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciaaxo.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Investigación Reclutamiento</p>
+            </a>
+          </li>
+     {% endif %}
+     {% if current_user.username in ['grupoaxo','axoguest'] %}
+	  <li class="nav-item {% if 'reclutamientoaxo' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/reclutamientoaxo.html">
+               <i>
+                <img src="/static/assets/icons/alineacion.png" width="100%"/>
+              </i>
+              <p> Costo de reclutamiento </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+         {% endif %}
+        </ul>
+      </div>
+    </div>
+
+
+
+{% elif current_user.username == 'nestle' %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+           <a target="_blank" rel="noopener noreferrer"
+              href="https://mattertalent.com/" class="simple-text logo-mini">
+        <div class="photo">
+          <img src="/static/assets/img/logo_mattertalent.png" width="40" />
+        </div>
+        </a>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://mattertalent.com/" class="simple-text logo-normal">
+          MATTERTALENT
+        </a></div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                <img src="/static/assets/img/nestlelogo.png" width="100%"/>
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+           <li class="nav-item {% if 'reportesnestle' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/reportesnestle.html">
+	     <i>
+                <img src="/static/assets/icons/entregables.png" width="100%"/>
+              </i>
+              <p> Entregables </p>
+            </a>
+          </li>
+
+        <!--
+	<li class="nav-item {% if 'integracion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/integracion.html">
+	      <i>
+                <img src="/static/assets/icons/integraciondedatos.png" width="100%"/>
+              </i>
+              <p>Rotación Full Price</p>
+            </a>
+          </li>
+
+	  <li class="nav-item {% if 'Permanenciaaxo' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciaaxo.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Investigación Reclutamiento</p>
+            </a>
+          </li>
+          -->
+	  <li class="nav-item {% if 'sucesionnestle' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/sucesionnestle.html">
+               <i>
+                <img src="/static/assets/icons/sucesion.png" width="100%"/>
+              </i>
+              <p> Sucesión </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+
+{% elif current_user.username in ['gpremier','gptijuana','gphermosillo','gpbmw','gpmazatlan','gpculiacan'] %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+           <a target="_blank" rel="noopener noreferrer"
+              href="https://mattertalent.com/" class="simple-text logo-mini">
+        <div class="photo">
+          <img src="/static/assets/img/logo_mattertalent.png" width="40" />
+        </div>
+        </a>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://mattertalent.com/" class="simple-text logo-normal">
+          MATTERTALENT
+        </a></div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                <img src="/static/assets/img/gplogo.png" width="100%"/>
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+       <!--
+           <li class="nav-item {% if 'reportesaxo' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/reportesaxo.html">
+	     <i>
+                <img src="/static/assets/icons/entregables.png" width="100%"/>
+              </i>
+              <p> Entregables </p>
+            </a>
+          </li>
+
+
+	<li class="nav-item {% if 'integracion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/integracion.html">
+	      <i>
+                <img src="/static/assets/icons/integraciondedatos.png" width="100%"/>
+              </i>
+              <p>Integración de datos</p>
+            </a>
+          </li>
+	-->
+     {% if current_user.username in ['gpremier'] %}
+	  <li class="nav-item {% if 'Permanenciagp.html' == segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciagp.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Análisis Toyotas </p>
+            </a>
+          </li>
+     {% endif %}
+     {% if current_user.username in ['gpremier','gptijuana'] %}
+	  <li class="nav-item {% if 'Permanenciagptj' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciagptj.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Hyundai Tijuana </p>
+            </a>
+          </li>
+      {% endif %}
+      {% if current_user.username in ['gpremier','gpbmw'] %}
+     <li class="nav-item {% if 'Permanenciagpst' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciagpst.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> BMW Saltillo</p>
+            </a>
+          </li>
+     {% endif %}
+     {% if current_user.username in ['gpremier','gpbmw'] %}
+     <li class="nav-item {% if 'Permanenciagpva' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciagpva.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> BMW Valle </p>
+            </a>
+          </li>
+     {% endif %}
+     {% if current_user.username in ['gpremier','gphermosillo'] %}
+     <li class="nav-item {% if 'Permanenciagpme' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciagpme.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Mercedes-Benz Hermosillo</p>
+            </a>
+          </li>
+     {% endif %}
+     {% if current_user.username in ['gpremier','gpbmw'] %}
+     <li class="nav-item {% if 'Permanenciagpmini' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciagpmini.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Mini Cooper Valle</p>
+            </a>
+          </li>
+     {% endif %}
+     {% if current_user.username in ['gpremier','gpmazatlan'] %}
+     <li class="nav-item {% if 'Permanenciagpmaza' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciagpmaza.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Chevrolet Mazatlán</p>
+            </a>
+          </li>
+     {% endif %}
+     {% if current_user.username in ['gpremier','gpculiacan'] %}
+           <li class="nav-item {% if 'Permanenciagpmaza' in segment %} active {% endif %} ">
+		   <a class="nav-link" href="/Permanenciagpchev.html">
+			   <i>
+				   <img src="/static/assets/icons/rotacion.png" width="100%"/>
+			   </i>
+	                   <p> Chevrolet Culiacán</p>
+		 </a>
+	   </li>
+     {% endif %}
+     {% if current_user.username in ['gpremier','gptijuana','gphermosillo','gpbmw','gpmazatlan','gpculiacan'] %}
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+      {% endif %}
+        </ul>
+      </div>
+    </div>
+
+{% elif current_user.username == 'lmision' %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+           <a target="_blank" rel="noopener noreferrer"
+              href="https://mattertalent.com/" class="simple-text logo-mini">
+        <div class="photo">
+          <img src="/static/assets/img/logo_mattertalent.png" width="40" />
+        </div>
+        </a>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://mattertalent.com/" class="simple-text logo-normal">
+          MATTERTALENT
+        </a></div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                <img src="/static/assets/img/lmlogo.png" width="100%"/>
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+       
+           <li class="nav-item {% if 'reportesmision' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/reportesmision.html">
+	     <i>
+                <img src="/static/assets/icons/entregables.png" width="100%"/>
+              </i>
+              <p> Reportes </p>
+            </a>
+          </li>
+
+   <!--
+	<li class="nav-item {% if 'integracion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/integracion.html">
+	      <i>
+                <img src="/static/assets/icons/integraciondedatos.png" width="100%"/>
+              </i>
+              <p>Integración de datos</p>
+            </a>
+          </li>
+	
+	  <li class="nav-item {% if 'Permanenciagp' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanenciagp.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Análisis Toyotas </p>
+            </a>
+          </li>
+	-->
+	  <li class="nav-item {% if 'Permanencialm' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanencialm.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Rotación </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+
+
+{% elif current_user.username == 'borgwarner' %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+           <a target="_blank" rel="noopener noreferrer"
+              href="https://mattertalent.com/" class="simple-text logo-mini">
+        <div class="photo">
+          <img src="/static/assets/img/logo_mattertalent.png" width="40" />
+        </div>
+        </a>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://mattertalent.com/" class="simple-text logo-normal">
+          MATTERTALENT
+        </a></div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="user-info">
+            <a  href="#" class="username">
+              <span>
+                <img src="/static/assets/img/bwicoall.png" width="100%"/>
+                
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+       
+         <li class="nav-item {% if 'rotacionbw' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/rotacionbw.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Rotación </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+
+{% elif current_user.username == 'gbimbo' %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+<center>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://www.grupobimbo.com/" class="simple-text logo-normal">
+           <img src="/static/assets/img/Logo_Grupo_BIMBO.svg" width="70%" />
+        </a>
+</center>
+</div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="photo">
+            <img src="/static/assets/img/osito.jpeg" />
+          </div>
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                Grupo BIMBO
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+	<!--
+           <li class="nav-item {% if 'reportes' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/reportes.html">
+              <i class="material-icons">report</i>
+              <p> Entregables </p>
+            </a>
+          </li> !-->
+           <li class="nav-item {% if 'aciones' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/acciones.html">
+              <i>
+                <img src="/static/assets/icons/accionesconcretas.png" width="100%"/>
+              </i>
+              <p> Acciones Concretas </p>
+            </a>
+          </li>
+	
+          <li class="nav-item {% if 'Permanencia' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanencia.html">
+               <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i>
+              <p> Permanencia </p>
+            </a>
+          </li>
+	<!--
+          <li class="nav-item {% if 'creatividad' in segment %} active {% endif %}">
+            <a class="nav-link" href="/creatividad.html">
+              <i class="material-icons">flare</i>
+	      <p>Creatividad</p>
+            </a>
+          </li>
+          <li class="nav-item {% if 'alineacion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/alineacion.html">
+              <i class="material-icons">healing</i>
+              <p>Alineación</p>
+            </a>
+          </li>
+          <li class="nav-item {% if 'vulnerabilidad' in segment %} active {% endif %}">
+            <a class="nav-link" href="/vulnerabilidad.html">
+              <i class="material-icons">report_problem</i>
+              <p>Vulnerabilidad</p>
+            </a>
+          </li>
+          
+	  <li class="nav-item {% if 'sucesion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/sucesion.html">
+              <i class="material-icons">autorenew3</i>
+              <p>Sucesión</p>
+            </a>
+          </li>
+
+	  <li class="nav-item {% if 'integracion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/integracion.html">
+              <i class="material-icons">integration_instructions</i>
+              <p>Integración de datos</p>
+            </a>
+          </li>
+	!-->
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+{% elif current_user.username == 'claugto' %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+<center>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://claugto.org/" class="simple-text logo-normal">
+           <img src="/static/assets/img/claugto-logo.png" width="90%" />
+        </a>
+</center>
+</div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="photo">
+            <img src="/static/assets/img/claugtologo.jpeg" />
+          </div>
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                CLAUGTO
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+  	<li class="nav-item {% if 'irh' in segment %} active {% endif %}">
+            <a class="nav-link" href="/irh.html">
+              <i class="material-icons red">check_circle</i>
+              <p>Indicadores RH</p>
+            </a>
+          </li>
+
+
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+{% elif current_user.username == 'autozone' %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+<center>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://www.autozone.com/" class="simple-text logo-normal">
+           <img src="/static/assets/img/AutoZone-Logo.png" width="90%" />
+        </a>
+</center>
+</div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="photo">
+            <img src="/static/assets/img/autozonelogo.jpeg" />
+          </div>
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                AUTOZONE
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+  	  <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+              <i class="material-icons">flare</i>
+              <p> Colaboración
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/sd.html">
+                    <span class="sidebar-mini"> SD </span>
+                    <span class="sidebar-normal">&nbsp; &nbsp; &nbsp; </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/bi.html">
+                    <span class="sidebar-mini"> BI </span>
+                    <span class="sidebar-normal"> &nbsp; &nbsp; &nbsp;</span>
+                  </a>
+                </li> 
+            </div>
+
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i class="material-icons">directions_run</i>
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+{% else %}
+    <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+           <a target="_blank" rel="noopener noreferrer"
+              href="https://mattertalent.com/" class="simple-text logo-mini">
+        <div class="photo">
+          <img src="/static/assets/img/logo_mattertalent.png" width="40" />
+        </div>
+        </a>
+        <a target="_blank" rel="noopener noreferrer"
+           href="https://mattertalent.com/" class="simple-text logo-normal">
+          MATTERTALENT
+        </a></div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="photo">
+            <img src="/static/assets/img/faces/yoel.png" />
+          </div>
+          <div class="user-info">
+            <a data-toggle="collapse" href="#collapseExample" class="username">
+              <span>
+                demo
+                <b class="caret"></b>
+              </span>
+            </a>
+          </div>
+        </div>
+        <ul class="nav">
+           <li class="nav-item {% if 'reportes' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/reportes.html">
+	      <i>
+            	<img src="/static/assets/icons/entregables.png" width="100%"/>
+              </i>
+              <p> Entregables </p>
+            </a>
+          </li>
+           <li class="nav-item {% if 'aciones' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/acciones.html">
+               <i>
+                <img src="/static/assets/icons/accionesconcretas.png" width="100%"/>
+              </i> 
+              <p> Acciones Concretas </p>
+            </a>
+          </li>
+          <li class="nav-item {% if 'Permanencia' in segment %} active {% endif %} ">
+            <a class="nav-link" href="/Permanencia.html">
+                            <i>
+                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+              </i> 
+              <p> Permanencia </p>
+            </a>
+          </li>
+        
+          <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+              <i><img src="/static/assets/icons/creatividad.png" width="100%"/></i>
+              <p> Creatividad
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/creatividadkamd.html">
+                    <span class="sidebar-mini"> D </span>
+                    <span class="sidebar-normal"> Dashboards </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="/creatividadkam.html">
+                    <span class="sidebar-mini"> T </span>
+                    <span class="sidebar-normal"> TalentMap </span>
+                  </a>
+                </li>
+             </ul>
+           </div>
+          </li>
+
+
+
+          <li class="nav-item {% if 'vulnerabilidad' in segment %} active {% endif %}">
+           <a class="nav-link" href="/vulnerabilidad.html">
+                            <i>
+                <img src="/static/assets/icons/vulnerabilidad.png" width="100%"/>
+              </i> 
+              <p>Vulnerabilidad</p>
+            </a>
+          </li>
+          
+	  <li class="nav-item {% if 'sucesion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/sucesion.html">
+                            <i>
+                <img src="/static/assets/icons/sucesion.png" width="100%"/>
+              </i> 
+              <p>Sucesión</p>
+            </a>
+          </li>
+
+
+	  <li class="nav-item {% if 'permanenciademo' in segment %} active {% endif %}">
+            <a class="nav-link" href="/permanenciademo.html">
+                            <i>
+                <img src="/static/assets/icons/integraciondedatos.png" width="100%"/>
+              </i> 
+              <p>Clima y engagement</p>
+            </a>
+          </li>
+
+	  <li class="nav-item {% if '360' in segment %} active {% endif %}">
+            <a class="nav-link" href="/360.html">
+                            <i>
+                <img src="/static/assets/icons/360img.png" width="100%"/>
+              </i> 
+              <p>360</p>
+            </a>
+          </li>
+
+	  <li class="nav-item {% if 'transformacion' in segment %} active {% endif %}">
+            <a class="nav-link" href="/transformacion.html">
+              <i>
+                <img src="/static/assets/icons/td.png" width="100%"/>
+              </i>
+
+              <p>Transformación digital</p>
+            </a>
+          </li>
+
+	  <li class="nav-item {% if 'irh' in segment %} active {% endif %}">
+            <a class="nav-link" href="/irh.html">
+              <i>
+                <img src="/static/assets/icons/indicadores.png" width="100%"/>
+              </i>
+
+              <p>Indicadores RH</p>
+            </a>
+          </li>
+
+
+
+	    <li class="nav-item {% if 'sdemo' in segment %} active {% endif %}">
+		<a class="nav-link" href="/sdemo.html">
+			<i><img src="/static/assets/icons/colaboracion.png" width="100%"/></i>
+                         <p>Colaboración</p>
+		</a>
+          </li>
+
+	  <li class="nav-item {% if 'costorec' in segment %} active {% endif %}">
+            <a class="nav-link" href="/costorec.html">
+              <i><img src="/static/assets/icons/crotacion.png" width="100%"/></i>
+              <p>Costo de rotación</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
+              <i>
+                <img src="/static/assets/icons/salir.png" width="100%"/>
+              </i>
+
+              <p> Logout [ {{ current_user.username }} ] </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+{% endif %}

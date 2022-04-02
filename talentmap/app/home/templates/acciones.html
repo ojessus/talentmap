@@ -1,0 +1,451 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Panels {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link rel="stylesheet" href="/static/assets/demo/jkanban.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Lato";
+        margin: 0;
+        padding: 0;
+      }
+
+      #myKanban {
+        overflow-x: auto;
+        padding: 20px 0;
+      }
+
+      .success {
+        background: #00b961;
+      }
+
+      .info {
+        background: #2a92bf;
+      }
+
+      .warning {
+        background: #f4ce46;
+      }
+
+      .error {
+        background: #fb7d44;
+      }
+
+      .custom-button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 7px 15px;
+        margin: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }      
+    </style>
+
+
+{% endblock stylesheets %}
+{% block content %}
+<div class="col-md-12 ml-auto mr-auto">
+<img src="/static/assets/banners/acciones_concretas.jpg" alt="Girl in a jacket" width="100%">
+</div>
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">Acciones cocretas</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#sociograma" role="tablist">
+              <i class="material-icons">view_column</i> Kanban
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#dash" role="tablist">
+              <i class="material-icons">timeline</i> Timeline
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#listas" role="tablist">
+              <i class="material-icons">task</i> Tasks
+            </a>
+          </li>
+	</ul>
+        <div class="tab-content tab-space tab-subcategories">
+          <div class="tab-pane active show" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Kanban</h4>
+              </div>
+              <div class="card-body">
+			<center>
+    			<div id="myKanban"></div>
+			</center>
+	     </div>
+            </div>
+          </div>
+          
+
+	<div class="tab-pane" id="dash">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Timeline</h4>
+              </div>
+              <div class="card-body">
+		
+	<div class="col-md-12">
+              <ul class="timeline timeline-simple">
+                <li class="timeline-inverted">
+                  <div class="timeline-badge danger">
+                    <i class="material-icons">developer_mode</i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <span class="badge badge-pill badge-danger">Grupo A: Desarrollo de Flexibilidad Cognitiva:</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>La flexibilidad cognitiva es la capacidad de darnos cuenta de que lo que estamos haciendo no funciona, o ha dejado de funcionar y, por tanto, debemos reajustar nuestra conducta, pensamiento y opiniones para adaptarnos al entorno y a las nuevas situaciones.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-badge success">
+                    <i class="material-icons">health_and_safety</i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <span class="badge badge-pill badge-success">Grupo B: Desarrollo de Inteligencia y Salud Emocional:</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Capacidad humana de sentir, entender, controlar y modificar los estados emocionales de uno mismo y también de los demás. Inteligencia Emocional no significa ahogar las emociones, sino dirigirlas y equilibrarlas.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-badge info">
+                    <i class="material-icons">explore</i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <span class="badge badge-pill badge-info">Grupo C: Fortalecer Conductas de riesgo (Beneficio adicional a clima para la creatividad): </span>
+                    </div>
+                    <div class="timeline-body">
+			<p>Estas conductas, diferentes de las acciones peligrosas o arriesgadas realizadas cuando las circunstancias lo exigen, reflejan una atracción por el riesgo y, en especial, por las sensaciones fuertes relacionadas con el enfrentamiento con el peligro y la muerte</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-badge warning">
+                    <i class="material-icons">next_plan</i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <span class="badge badge-pill badge-warning">Grupo D: Planificación y toma de decisiones: </span>
+                    </div>
+                    <div class="timeline-body">
+			<p>La planificación es una forma concreta de la toma de decisiones que aborda el futuro especifico que los administradores quieren para sus organizaciones. Planes diseñados para alcanzar las metas generales de una organización. </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>              
+	     </div>
+            </div>
+          </div>
+
+	<div class="tab-pane" id="listas">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Tasks</h4>
+              </div>
+              <div class="card-body">
+		<div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-rose">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <span class="nav-tabs-title">Tasks:</span>
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#profile" data-toggle="tab">
+                            <i class="material-icons">group_work</i> Coaching
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#messages" data-toggle="tab">
+                            <i class="material-icons">grading</i> Reporting
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#settings" data-toggle="tab">
+                            <i class="material-icons">ios_share</i> Sharing
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="profile">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Sesión de coaching con cada director, revisar su reporte individual y su estilo de liderazgo</td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Hacer video de interpretación del reporte individual.</td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tab-pane" id="messages">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="" checked>
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Entregar reporte individual a cada colaborador de la empresa.
+                            </td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tab-pane" id="settings">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" value="">
+                                  <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                </label>
+                              </div>
+                            </td>
+                            <td>Pedir a cada colaborador entregue a su supervisor directo 5 cosas que van a hacer en relación a su reporte individual.</td>
+                            <td class="td-actions text-right">
+                              <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                                <i class="material-icons">edit</i>
+                              </button>
+                              <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
+                                <i class="material-icons">close</i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>		
+		
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}
+
+<script src="/static/assets/demo/jkanban.js"></script>
+    <script>
+      var KanbanTest = new jKanban({
+        element: "#myKanban",
+        gutter: "10px",
+        widthBoard: "300px",
+        itemHandleOptions:{
+          enabled: true,
+        },
+        click: function(el) {
+          console.log("Trigger on all items click!");
+        },
+        dropEl: function(el, target, source, sibling){
+          console.log(target.parentElement.getAttribute('data-id'));
+          console.log(el, target, source, sibling)
+        },
+        buttonClick: function(el, boardId) {
+          console.log(el);
+          console.log(boardId);
+          // create a form to enter element
+          var formItem = document.createElement("form");
+          formItem.setAttribute("class", "itemform");
+          formItem.innerHTML =
+            '<div class="form-group"><textarea class="form-control" rows="2" autofocus></textarea></div><div class="form-group"><button type="submit" class="btn btn-primary btn-xs pull-right">Submit</button><button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Cancel</button></div>';
+
+          KanbanTest.addForm(boardId, formItem);
+          formItem.addEventListener("submit", function(e) {
+            e.preventDefault();
+            var text = e.target[0].value;
+            KanbanTest.addElement(boardId, {
+              title: text
+            });
+            formItem.parentNode.removeChild(formItem);
+          });
+          document.getElementById("CancelBtn").onclick = function() {
+            formItem.parentNode.removeChild(formItem);
+          };
+        },
+        itemAddOptions: {
+          enabled: true,
+          content: '+ Add New Card',
+          class: 'custom-button',
+          footer: true
+        },
+        boards: [
+          {
+            id: "_todo",
+            title: "To Do",
+            class: "info,good",
+            dragTo: ["_working"],
+            item: [
+		{title:"Grupo A: Desarrollo de Flexibilidad Cognitiva"},
+		{title:"Job embedenesspara activar grupo de Gerentes"},
+		{title:"Grupo B: Desarrollo de Inteligencia y Salud Emocional"},
+		{title:"Onboarding lista de personas frenando cultira y productividad"},
+		{title:"Desviación positiva TOP Influencers"},
+		{title:"Activación de Competencia ética y valores profesionales:"}
+            ]
+          },
+          {
+            id: "_working",
+            title: "DOING",
+            class: "warning",
+            item: [
+              {
+                title: "Desviación positiva TOP Influencers"
+              },
+              {
+                title: "Desviación positiva TOP Influencers"
+              },
+              {
+                title: "Grupo C: Fortalecer Conductas de riesgo"
+              }
+            ]
+          },
+          {
+            id: "_done",
+            title: "DONE",
+            class: "success",
+            dragTo: ["_working"],
+            item: [
+              {
+                title: "Fortalecimiento de habilidades de Liderazgo relacionadas a Distancia Jerárquica"
+              }
+            ]
+          }
+        ]
+      });
+
+      var toDoButton = document.getElementById("addToDo");
+      toDoButton.addEventListener("click", function() {
+        KanbanTest.addElement("_todo", {
+          title: "Test Add"
+        });
+      });
+
+      var addBoardDefault = document.getElementById("addDefault");
+      addBoardDefault.addEventListener("click", function() {
+        KanbanTest.addBoards([
+          {
+            id: "_default",
+            title: "Kanban Default",
+            item: [
+              {
+                title: "Default Item"
+              },
+              {
+                title: "Default Item 2"
+              },
+              {
+                title: "Default Item 3"
+              }
+            ]
+          }
+        ]);
+      });
+
+      var removeBoard = document.getElementById("removeBoard");
+      removeBoard.addEventListener("click", function() {
+        KanbanTest.removeBoard("_done");
+      });
+
+      var removeElement = document.getElementById("removeElement");
+      removeElement.addEventListener("click", function() {
+        KanbanTest.removeElement("_test_delete");
+      });
+
+      var allEle = KanbanTest.getBoardElements("_todo");
+      allEle.forEach(function(item, index) {
+        //console.log(item);
+      });
+    </script>
+{% endblock javascripts %}

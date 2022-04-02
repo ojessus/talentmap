@@ -1,0 +1,60 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Panels {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">Colaboración</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociograma" role="tablist">
+              <i class="material-icons">place</i> A.R.O.
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#dash" role="tablist">
+              <i class="material-icons">insights</i> TalentMap
+            </a>
+          </li>
+	</ul>
+        <div class="tab-content tab-space tab-subcategories">
+          <div class="tab-pane" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">A.R.O.</h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe kumu-->
+																	<a href="https://embed.kumu.io/c1b0923daade56d945987b0ab219862e" target="_blank">
+                        <button type="button" class="btn btn-default btn-block">Launch A.R.O.</button>
+                </a>
+														<!-- iframe kumu-->
+														<iframe src="https://embed.kumu.io/c1b0923daade56d945987b0ab219862e" width="100%" height="600" frameborder="0"></iframe>
+		
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane active show" id="dash">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">TalentMap</h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe Powe bi-->
+		<iframe width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNGU5YzYyOTMtZGNiOC00OTEwLThlODUtNDEzNWJmMTYzOTMyIiwidCI6ImZmNjRmZWUwLWZmZWYtNGQxOS1iNzM2LTJjNDA4YzA3ODgzMyJ9" frameborder="0" allowFullScreen="true"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}

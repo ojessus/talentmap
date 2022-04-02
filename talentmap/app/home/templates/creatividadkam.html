@@ -1,0 +1,116 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} KAM {% endblock title %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<div class="col-md-10 ml-auto mr-auto">
+      <div class="page-categories">
+        <h3 class="title text-center">NETWORK INSIGHT MAPS</h3>
+        <br>
+        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+	  <li class="nav-item">
+            <a class="nav-link  active show" data-toggle="tab" href="#sociogramag" role="tablist">
+              <i class="material-icons">place</i> General
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociogramae" role="tablist">
+              <i class="material-icons">place</i> Equipos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociogramas" role="tablist">
+              <i class="material-icons">place</i> SOQ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociogramap" role="tablist">
+              <i class="material-icons">place</i> PEER
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#sociograman" role="tablist">
+              <i class="material-icons">place</i> Negativos
+            </a>
+          </li>
+	</ul>
+        <div class="tab-content tab-space tab-subcategories">
+          <div class="tab-pane active show" id="sociogramag">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">TalentMap General</h4>
+              </div>
+              <div class="card-body">
+		<a href="https://embed.kumu.io/7f02fe846e1fc3a18109033acd70c381" target="_blank">
+                        <button type="button" class="btn btn-default btn-block">Launch TalentMap</button>
+                </a>
+		<iframe src="https://embed.kumu.io/7f02fe846e1fc3a18109033acd70c381" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="sociogramae">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">TalentMap Equipos</h4>
+              </div>
+              <div class="card-body">
+		 <a href="https://embed.kumu.io/f63651182ed3e5a62217e409e166cfa5" target="_blank">
+                        <button type="button" class="btn btn-default btn-block">Launch TalentMap</button>
+                </a>
+		<!-- iframe kumu-->
+		<iframe src="https://embed.kumu.io/f63651182ed3e5a62217e409e166cfa5" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="sociogramas">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">TalentMap SOQ</h4>
+              </div>
+              <div class="card-body">
+		 <a href="https://embed.kumu.io/43604e9473bb091d7eba1efdc050d2c5" target="_blank">
+                        <button type="button" class="btn btn-default btn-block">Launch TalentMap</button>
+                </a>
+		<!-- iframe kumu-->
+		<iframe src="https://embed.kumu.io/43604e9473bb091d7eba1efdc050d2c5" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="sociogramap">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">TalentMap PEER</h4>
+              </div>
+              <div class="card-body">
+		 <a href="https://embed.kumu.io/4638bac9c3d05ca5266e3c8f2c293a7d" target="_blank">
+                        <button type="button" class="btn btn-default btn-block">Launch TalentMap</button>
+                </a>
+		<!-- iframe kumu-->
+		<iframe src="https://embed.kumu.io/4638bac9c3d05ca5266e3c8f2c293a7d" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="sociograman">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">TalentMap Negativos</h4>
+              </div>
+              <div class="card-body">
+		 <a href="https://embed.kumu.io/8e6b0503442fe2325c3f94fc875222a8" target="_blank">
+                        <button type="button" class="btn btn-default btn-block">Launch TalentMap</button>
+                </a>
+		<!-- iframe kumu-->
+		<iframe src="https://embed.kumu.io/8e6b0503442fe2325c3f94fc875222a8" width="100%" height="600" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+{% endblock content %}
+
+{% block javascripts %}{% endblock javascripts %}
