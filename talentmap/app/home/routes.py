@@ -53,6 +53,94 @@ def index():
         return render_template('Permanenciagpmaza.html', segment='Permanenciagpmaza')
     elif current_user.username == 'gpculiacan':
         return render_template('Permanenciagpchev.html', segment='Permanenciagpchev')
+    elif current_user.username == 'gpAutCul':
+        return render_template('PermanenciagpAutCul.html', segment='PermanenciagpAutCul')
+    elif current_user.username == 'gpAutMoc':
+        return render_template('PermanenciagpAutMoc.html', segment='PermanenciagpAutMoc')
+    elif current_user.username == 'gpAutTot':
+        return render_template('PermanenciagpAutTot.html', segment='PermanenciagpAutTot')
+    elif current_user.username == 'gpHyuCul':
+        return render_template('PermanenciagpHyuCul.html', segment='PermanenciagpHyuCul')
+    elif current_user.username == 'gpHyuCab':
+        return render_template('PermanenciagpHyuCab.html', segment='PermanenciagpHyuCab')
+    elif current_user.username == 'gpHyuTij':
+        return render_template('PermanenciagpHyuTij.html', segment='PermanenciagpHyuTij')
+    elif current_user.username == 'gpHyuMex':
+        return render_template('PermanenciagpHyuMex.html', segment='PermanenciagpHyuMex')
+    elif current_user.username == 'gpHyuMaz':
+        return render_template('PermanenciagpHyuMaz.html', segment='PermanenciagpHyuMaz')
+    elif current_user.username == 'gpHyuTot':
+        return render_template('PermanenciagpHyuTot.html', segment='PermanenciagpHyuTot')
+    elif current_user.username == 'gpToyZar':
+        return render_template('PermanenciagpToyZar.html', segment='PermanenciagpToyZar')
+    elif current_user.username == 'gpToyMoc':
+        return render_template('PermanenciagpToyMoc.html', segment='PermanenciagpToyMoc')
+    elif current_user.username == 'gpToyGua':
+        return render_template('PermanenciagpToyGua.html', segment='PermanenciagpToyGua')
+    elif current_user.username == 'gpToyCua':
+        return render_template('PermanenciagpToyCua.html', segment='PermanenciagpToyCua')
+    elif current_user.username == 'gpToyMaz':
+        return render_template('PermanenciagpToyMaz.html', segment='PermanenciagpToyMaz')
+    elif current_user.username == 'gpToyTot':
+        return render_template('PermanenciagpToyTot.html', segment='PermanenciagpToyTot')
+    elif current_user.username == 'gpKiaCab':
+        return render_template('PermanenciagpKiaCab.html', segment='PermanenciagpKiaCab')
+    elif current_user.username == 'gpKiaCdO':
+        return render_template('PermanenciagpKiaCdO.html', segment='PermanenciagpKiaCdO')
+    elif current_user.username == 'gpKiaCul':
+        return render_template('PermanenciagpKiaCul.html', segment='PermanenciagpKiaCul')
+    elif current_user.username == 'gpKiaHer':
+        return render_template('PermanenciagpKiaHer.html', segment='PermanenciagpKiaHer')
+    elif current_user.username == 'gpKiaLaP' :
+        return render_template('PermanenciagpKiaLaP.html', segment='PermanenciagpKiaLaP')
+    elif current_user.username == 'gpKiaMoc':
+        return render_template('PermanenciagpKiaMoc.html', segment='PermanenciagpKiaMoc')
+    elif current_user.username == 'gpKiaTot':
+        return render_template('PermanenciagpKiaTot.html', segment='PermanenciagpKiaTot')
+    elif current_user.username == 'gpBMWCul':
+        return render_template('PermanenciagpBMWCul.html', segment='PermanenciagpBMWCul')
+    elif current_user.username == 'gpBMWMon':
+        return render_template('PermanenciagpBMWMon.html', segment='PermanenciagpBMWMon')
+    elif current_user.username == 'gpBMWSal':
+        return render_template('PermanenciagpBMWSal.html', segment='PermanenciagpBMWSal')
+    elif current_user.username == 'gpBMWTot':
+        return render_template('PermanenciagpBMWTot.html', segment='PermanenciagpBMWTot')
+    elif current_user.username == 'gpGMCCul':
+        return render_template('PermanenciagpGMCCul.html', segment='PermanenciagpGMCCul')
+    elif current_user.username == 'gpGMCMoc':
+        return render_template('PermanenciagpGMCMoc.html', segment='PermanenciagpGMCMoc')
+    elif current_user.username == 'gpGMCMaz':
+        return render_template('PermanenciagpGMCMaz.html', segment='PermanenciagpGMCMaz')
+    elif current_user.username == 'gpGMCTot':
+        return render_template('PermanenciagpGMCTot.html', segment='PermanenciagpGMCTot')
+    elif current_user.username == 'gpCheCul':
+        return render_template('PermanenciagpCheCul.html', segment='PermanenciagpCheCul')
+    elif current_user.username == 'gpCheMaz':
+        return render_template('PermanenciagpCheMaz.html', segment='PermanenciagpCheMaz')
+    elif current_user.username == 'gpCheHer':
+        return render_template('PermanenciagpCheHer.html', segment='PermanenciagpCheHer')
+    elif current_user.username == 'gpCheTot':
+        return render_template('PermanenciagpCheTot.html', segment='PermanenciagpCheTot')
+    elif current_user.username == 'gpMerHer':
+        return render_template('PermanenciagpMerHer.html', segment='PermanenciagpMerHer')
+    elif current_user.username == 'gpMerCul':
+        return render_template('PermanenciagpMerCul.html', segment='PermanenciagpMerCul')
+    elif current_user.username == 'gpMerTot':
+        return render_template('PermanenciagpMerTot.html', segment='PermanenciagpMerTot')
+    elif current_user.username == 'gpJagCul':
+        return render_template('PermanenciagpJagCul.html', segment='PermanenciagpJagCul')
+    elif current_user.username == 'gpCorCul':
+        return render_template('PermanenciagpCorCul.html', segment='PermanenciagpCorCul')
+    elif current_user.username == 'gpHinCul':
+        return render_template('PermanenciagpHinCul.html', segment='PermanenciagpHinCul')
+    elif current_user.username == 'gpMinCul':
+        return render_template('PermanenciagpMinCul.html', segment='PermanenciagpMinCul')
+    elif current_user.username == 'gpMinMon':
+        return render_template('PermanenciagpMinMon.html', segment='PermanenciagpMinMon')
+    elif current_user.username == 'gpPlaCul':
+        return render_template('PermanenciagpPlaCul.html', segment='PermanenciagpPlaCul')
+    elif current_user.username == 'gpMinTot':
+        return render_template('PermanenciagpMinTot.html', segment='PermanenciagpMinTot') 
     elif current_user.username == 'autozone':
         return render_template('bi.html', segment='colaboracion')
     elif current_user.username == 'axoguest':
