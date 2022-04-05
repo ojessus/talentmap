@@ -257,11 +257,12 @@
       </div>
     </div>
 
-{% elif current_user.username in ['gpremier','gpAutCul','gpAutMoc','gpAutTot','gpHyuCul','gpHyuCab','gpHyuTij',
-'gpHyuMex','gpHyuMaz','gpHyuTot','gpToyZar','gpToyMoc','gpToyGua','gpToyCua','gpToyMaz','gpToy','gpKiaCab',
-'gpKiaCd','gpKiaCul','gpKiaHer','gpKiaLa','gpKiaMoc','gpKiaTot','gpBMWCul','gpBMWMon','gpBMWSal','gpBMWTot',
-'gpGMCCul','gpGMCMoc','gpGMCMaz','gpGMCTot','gpCheCul','gpCheMaz','gpCheHer','gpCheTot','gpMerHer','gpMerCul',
-'gpMerTot','gpJagCul','gpCorCul','gpHinCul','gpMinCul','gpMinMon','gpPlaCul','gpMinTot'] %}
+
+{% elif current_user.username in ['gpremier','gpAutCul','gpAutMoc','gpAut','gpHyuCul','gpHyuCab','gpHyuTij',
+'gpHyuMex','gpHyuMaz','gpHyu','gpToyZar','gpToyMoc','gpToyGua','gpToyCua','gpToyMaz','gpToy','gpKiaCab',
+'gpKiaCdO','gpKiaCul','gpKiaHer','gpKiaLaP','gpKiaMoc','gpKia','gpBmwCul','gpBmwMon','gpBmwSal','gpBmw',
+'gpGmcCul','gpGmcMoc','gpGmcMaz','gpGmc','gpCheCul','gpCheMaz','gpCheHer','gpChe','gpMerHer','gpMerCul',
+'gpMer','gpJagCul','gpCorCul','gpHinCul','gpMinCul','gpMinMon','gpPlaCul','gpMin'] %}
     <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -311,534 +312,689 @@
             </a>
           </li>
   -->
-     {% if current_user.username in ['gpremier'] %}
-    <li class="nav-item {% if 'Permanenciagp.html' == segment %} active {% endif %} ">
-            <a class="nav-link" href="/Permanenciagp.html">
-                            <i>
-                <img src="/static/assets/icons/rotacion.png" width="100%"/>
-              </i>
-              <p> Análisis Toyotas </p>
-            </a>
-          </li>
-     {% endif %}
-     {% if current_user.username in ['gpremier','gptijuana'] %}
-    <li class="nav-item {% if 'Permanenciagptj' in segment %} active {% endif %} ">
-            <a class="nav-link" href="/Permanenciagptj.html">
-                            <i>
-                <img src="/static/assets/icons/rotacion.png" width="100%"/>
-              </i>
-              <p> Hyundai Tijuana </p>
-            </a>
-          </li>
-      {% endif %}
-      {% if current_user.username in ['gpremier','gpbmw'] %}
-     <li class="nav-item {% if 'Permanenciagpst' in segment %} active {% endif %} ">
-            <a class="nav-link" href="/Permanenciagpst.html">
-                            <i>
-                <img src="/static/assets/icons/rotacion.png" width="100%"/>
-              </i>
-              <p> BMW Saltillo</p>
-            </a>
-          </li>
-     {% endif %}
-     {% if current_user.username in ['gpremier','gpbmw'] %}
-     <li class="nav-item {% if 'Permanenciagpva' in segment %} active {% endif %} ">
-            <a class="nav-link" href="/Permanenciagpva.html">
-                            <i>
-                <img src="/static/assets/icons/rotacion.png" width="100%"/>
-              </i>
-              <p> BMW Valle </p>
-            </a>
-          </li>
-     {% endif %}
-     {% if current_user.username in ['gpremier','gphermosillo'] %}
-     <li class="nav-item {% if 'Permanenciagpme' in segment %} active {% endif %} ">
-            <a class="nav-link" href="/Permanenciagpme.html">
-                            <i>
-                <img src="/static/assets/icons/rotacion.png" width="100%"/>
-              </i>
-              <p> Mercedes-Benz Hermosillo</p>
-            </a>
-          </li>
-     {% endif %}
-     {% if current_user.username in ['gpremier','gpbmw'] %}
-     <li class="nav-item {% if 'Permanenciagpmini' in segment %} active {% endif %} ">
-            <a class="nav-link" href="/Permanenciagpmini.html">
-                            <i>
-                <img src="/static/assets/icons/rotacion.png" width="100%"/>
-              </i>
-              <p> Mini Cooper Valle</p>
-            </a>
-          </li>
-     {% endif %}
-     {% if current_user.username in ['gpremier','gpmazatlan'] %}
-     <li class="nav-item {% if 'Permanenciagpmaza' in segment %} active {% endif %} ">
-            <a class="nav-link" href="/Permanenciagpmaza.html">
-                            <i>
-                <img src="/static/assets/icons/rotacion.png" width="100%"/>
-              </i>
-              <p> Chevrolet Mazatlán</p>
-            </a>
-          </li>
-     {% endif %}
-     {% if current_user.username in ['gpremier','gpculiacan'] %}
-           <li class="nav-item {% if 'Permanenciagpmaza' in segment %} active {% endif %} ">
-       <a class="nav-link" href="/Permanenciagpchev.html">
-         <i>
-           <img src="/static/assets/icons/rotacion.png" width="100%"/>
-         </i>
-                     <p> Chevrolet Culiacán</p>
-     </a>
-     </li>
-     {% endif %}
-    {% if current_user.username in ['gpremier','gpAut','gpAutCul'] %}
-     <li class="nav-item {% if 'PermanenciagpAutCul' in segment %} active {% endif %} ">
-            <a class="nav-link" href="/PermanenciagpAutCul.html">
-                            <i>
-                <img src="/static/assets/icons/rotacion.png" width="100%"/>
-              </i>
-              <p> Autocountry Culiacán </p>
-            </a>
-          </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpAut','gpAutMoc'] %}
-         <li class="nav-item {% if 'PermanenciagpAutMoc' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpAutMoc.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Autocountry Mochis </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpAut'] %}
-         <li class="nav-item {% if 'PermanenciagpAutTot' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpAutTot.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Autocountry General </p>
-                </a>
-              </li>
-    {% endif %} 
-     
-    {% if current_user.username in ['gpremier','gpbmw','gpBmwSal'] %}
-         <li class="nav-item {% if 'PermanenciagpBMWSal' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpBMWSal.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> BMW Saltillo</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpbmw','gpBmwMon'] %}
-         <li class="nav-item {% if 'PermanenciagpBMWMon' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpBMWMon.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> BMW Monterrey </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpbmw','gpBmwCul'] %}
-         <li class="nav-item {% if 'PermanenciagpBMWCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpBMWCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> BMW Culiacán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpbmw'] %}
-         <li class="nav-item {% if 'PermanenciagpBMWTot' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpBMWTot.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> BMW General </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpCheCul','gpChe'] %}
-         <li class="nav-item {% if 'PermanenciagpCheCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpCheCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Chevrolet Culiacán</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpChe','gpCheMaz'] %}
-               <li class="nav-item {% if 'PermanenciagpCheMaz' in segment %} active {% endif %} ">
-           <a class="nav-link" href="/PermanenciagpCheMaz.html">
-             <i>
-               <img src="/static/assets/icons/rotacion.png" width="100%"/>
-             </i>
-                         <p> Chevrolet Mazatlán </p>
-         </a>
-         </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpCheHer','gpChe'] %}
-               <li class="nav-item {% if 'PermanenciagpCheHer' in segment %} active {% endif %} ">
-           <a class="nav-link" href="/PermanenciagpCheHer.html">
-             <i>
-               <img src="/static/assets/icons/rotacion.png" width="100%"/>
-             </i>
-                         <p> Chevrolet Hermosillo</p>
-         </a>
-         </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpChe'] %}
-               <li class="nav-item {% if 'PermanenciagpCheTot' in segment %} active {% endif %} ">
-           <a class="nav-link" href="/PermanenciagpCheTot.html">
-             <i>
-               <img src="/static/assets/icons/rotacion.png" width="100%"/>
-             </i>
-                         <p> Chevrolet General</p>
-         </a>
-         </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpCorCul'] %}
-         <li class="nav-item {% if 'PermanenciagpCorCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpCorCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Corporativo Cualiacán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpGmc','gpGmcCul'] %}
-         <li class="nav-item {% if 'PermanenciagpGMCCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpGMCCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> GMC Culiacán</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpGmc', 'gpGmcMoc'] %}
-         <li class="nav-item {% if 'PermanenciagpGMCMoc' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpGMCMoc.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> GMC Mochis</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpGmc','gpGmcMaz'] %}
-         <li class="nav-item {% if 'PermanenciagpGMCMaz' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpGMCMaz.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> GMC Mazatlán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpGmc'] %}
-         <li class="nav-item {% if 'PermanenciagpGMCTot' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpGMCTot.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> GMC General </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpHinCul'] %}
-         <li class="nav-item {% if 'PermanenciagpHinCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpHinCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Hino Culiacán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpHyu','gpHyuCul'] %}
-         <li class="nav-item {% if 'PermanenciagpgpHyuCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpHyuCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Hyundai Culiacán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpHyu','gpHyuCab'] %}
-         <li class="nav-item {% if 'PermanenciagpHyuCab' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpHyuCab.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Hyundai Cabos </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpHyu','gpHyuTij'] %}
-         <li class="nav-item {% if 'PermanenciagpHyuTij' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpHyuTij.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Hyundai Tijuana </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpHyu','gpHyuMex'] %}
-         <li class="nav-item {% if 'PermanenciagpHyuMex' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpHyuMex.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Hyundai Mexicali</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpHyu','gpHyuMaz'] %}
-         <li class="nav-item {% if 'PermanenciagpHyuMaz' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpHyuMaz.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Hyundai Mazatlán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpHyu'] %}
-         <li class="nav-item {% if 'PermanenciagpHyuTot' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpHyuTot.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Hyundai General </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpJagCul'] %}
-         <li class="nav-item {% if 'PermanenciagpJagCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpJagCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Jaguar Land Rover Culiacán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpKia','gpKiaCab'] %}
-         <li class="nav-item {% if 'PermanenciagpKiaCab' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpKiaCab.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> KIA Cabos</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpKia','gpKiaCdO'] %}
-         <li class="nav-item {% if 'PermanenciagpKiaCdO' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpKiaCdO.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> KIA Cd Obregón</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpKia','gpKiaCul'] %}
-         <li class="nav-item {% if 'PermanenciagpKiaCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpKiaCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> KIA Culiacán</p>
-                </a>
-              </li>
-    {% endif %}
+     {% if current_user.username in ['gpremier','gpAut'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
 
-    {% if current_user.username in ['gpremier','gpKia','gpKiaHer'] %}
-         <li class="nav-item {% if 'PermanenciagpKiaHer' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpKiaHer.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> KIA Hermosillo</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpKia','gpKiaLaP'] %}
-         <li class="nav-item {% if 'PermanenciagpKiaLaP' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpKiaLaP.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> KIA La Paz</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpKia','gpKiaMoc'] %}
-         <li class="nav-item {% if 'PermanenciagpKiaMoc' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpKiaMoc.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> KIA Mochis</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpKia'] %}
-         <li class="nav-item {% if 'PermanenciagpKiaTot' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpKiaTot.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> KIA General</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpMer','gpMerHer'] %}
-         <li class="nav-item {% if 'PermanenciagpMerHer' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpMerHer.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Mercedes-Benz Hermosillo</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpMer','gpMerCul'] %}
-         <li class="nav-item {% if 'PermanenciagpMerCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpMerCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Mercedes-Benz Culiacán</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpMer'] %}
-         <li class="nav-item {% if 'PermanenciagpMerTot' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpMerTot.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Mercedes-Benz General </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpMin','gpMinCul'] %}
-         <li class="nav-item {% if 'PermanenciagpMinCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpMinCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Mini Cooper Culiacán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpMin','gpMinMon'] %}
-         <li class="nav-item {% if 'Permanenciagpmini' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpMinMon.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Mini Cooper Monterrey</p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpMin'] %}
-         <li class="nav-item {% if 'PermanenciagpMinTot' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpMinTot.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Mini Cooper General </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpPlaCul'] %}
-         <li class="nav-item {% if 'PermanenciagpPlaCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpPlaCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Planauto Culiacán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpToy','gpToyZar'] %}
-         <li class="nav-item {% if 'PermanenciagpToyZar' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpToyZar.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Toyota Zaragosa </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpToy','gpToyMoc'] %}
-         <li class="nav-item {% if 'PermanenciagpToyMoc' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpToyMoc.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Toyota Mochis </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpToy','gpToyGua'] %}
-         <li class="nav-item {% if 'PermanenciagpToyGua' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpToyGua.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Toyota Guasave </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpToy','gpToyCul'] %}
-         <li class="nav-item {% if 'PermanenciagpToyCul' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpToyCul.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Toyota Culiacán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpToyMaz','gpToy'] %}
-         <li class="nav-item {% if 'PermanenciagpToyMaz' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpToyMaz.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Toyota Mazatlán </p>
-                </a>
-              </li>
-    {% endif %}
-    {% if current_user.username in ['gpremier','gpToy'] %}
-         <li class="nav-item {% if 'PermanenciagpToyTot' in segment %} active {% endif %} ">
-                <a class="nav-link" href="/PermanenciagpToyTot.html">
-                                <i>
-                    <img src="/static/assets/icons/rotacion.png" width="100%"/>
-                  </i>
-                  <p> Toyota General </p>
-                </a>
-              </li>
-    {% endif %}        
-            
-     {% if current_user.username in ['gpremier','gptijuana','gphermosillo','gpbmw','gpmazatlan','gpculiacan','gpAutCul','gpAutMoc','gpAutTot','gpHyuCul','gpHyuCab','gpHyuTij',
-'gpHyuMex','gpHyuMaz','gpHyuTot','gpToyZar','gpToyMoc','gpToyGua','gpToyCua','gpToyMaz','gpToy','gpKiaCab',
-'gpKiaCd','gpKiaCul','gpKiaHer','gpKiaLa','gpKiaMoc','gpKiaTot','gpBMWCul','gpBMWMon','gpBMWSal','gpBMWTot',
-'gpGMCCul','gpGMCMoc','gpGMCMaz','gpGMCTot','gpCheCul','gpCheMaz','gpCheHer','gpCheTot','gpMerHer','gpMerCul',
-'gpMerTot','gpJagCul','gpCorCul','gpHinCul','gpMinCul','gpMinMon','gpPlaCul','gpMinTot' ] %}
+              <p> Autocountry
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+                {% if current_user.username in ['gpremier','gpAut','gpAutCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpAutCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpAutCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Autocountry Culiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpAut','gpAutMoc'] %}
+                     <li class="nav-item {% if 'PermanenciagpAutMoc' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpAutMoc.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Autocountry Mochis </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpAut'] %}
+                     <li class="nav-item {% if 'PermanenciagpAutTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpAutTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Autocountry General </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+
+{% if current_user.username in ['gpremier','gpBmwCul','gpBmwMon','gpBmwSal','gpBmw'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> BMW
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+                {% if current_user.username in ['gpremier','gpBmw','gpBmwSal'] %}
+                     <li class="nav-item {% if 'PermanenciagpBMWSal' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpBMWSal.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> BMW Saltillo</p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                {% if current_user.username in ['gpremier','gpBmw','gpBmwMon'] %}
+                     <li class="nav-item {% if 'PermanenciagpBMWMon' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpBMWMon.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> BMW Monterrey </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpBmw','gpBmwCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpBMWCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpBMWCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> BMW Culiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpBmw'] %}
+                     <li class="nav-item {% if 'PermanenciagpBMWTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpBMWTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> BMW General </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier','gpCheCul','gpCheMaz','gpCheHer','gpChe'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Chevrolet
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+                {% if current_user.username in ['gpremier','gpCheCul','gpChe'] %}
+                     <li class="nav-item {% if 'PermanenciagpCheCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpCheCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Chevrolet Culiacán</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpChe','gpCheMaz'] %}
+                           <li class="nav-item {% if 'PermanenciagpCheMaz' in segment %} active {% endif %} ">
+                       <a class="nav-link" href="/PermanenciagpCheMaz.html">
+                         <i>
+                           <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                         </i>
+                                     <p> Chevrolet Mazatlán </p>
+                     </a>
+                     </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpCheHer','gpChe'] %}
+                           <li class="nav-item {% if 'PermanenciagpCheHer' in segment %} active {% endif %} ">
+                       <a class="nav-link" href="/PermanenciagpCheHer.html">
+                         <i>
+                           <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                         </i>
+                                     <p> Chevrolet Hermosillo</p>
+                     </a>
+                     </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpChe'] %}
+                           <li class="nav-item {% if 'PermanenciagpCheTot' in segment %} active {% endif %} ">
+                       <a class="nav-link" href="/PermanenciagpCheTot.html">
+                         <i>
+                           <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                         </i>
+                                     <p> Chevrolet General</p>
+                     </a>
+                     </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier', 'gpCorCul'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Corporativo
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+                {% if current_user.username in ['gpremier','gpCorCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpCorCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpCorCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Corporativo Cualiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier','gpGmcCul','gpGmcMoc','gpGmcMaz','gpGmc'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> GMC
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+                {% if current_user.username in ['gpremier','gpGmc','gpGmcCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpGMCCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpGMCCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> GMC Culiacán</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpGmc', 'gpGmcMoc'] %}
+                     <li class="nav-item {% if 'PermanenciagpGMCMoc' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpGMCMoc.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> GMC Mochis</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpGmc','gpGmcMaz'] %}
+                     <li class="nav-item {% if 'PermanenciagpGMCMaz' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpGMCMaz.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> GMC Mazatlán </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpGmc'] %}
+                     <li class="nav-item {% if 'PermanenciagpGMCTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpGMCTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> GMC General </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier','gpHinCul'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Hino
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+                {% if current_user.username in ['gpremier','gpHinCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpHinCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpHinCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Hino Culiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier','gpHyuCul','gpHyuCab','gpHyuTij','gpHyuMex','gpHyuMaz','gpHyu'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Hyundai
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+                {% if current_user.username in ['gpremier','gpHyu','gpHyuCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpgpHyuCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpHyuCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Hyundai Culiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpHyu','gpHyuCab'] %}
+                     <li class="nav-item {% if 'PermanenciagpHyuCab' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpHyuCab.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Hyundai Cabos </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpHyu','gpHyuTij'] %}
+                     <li class="nav-item {% if 'PermanenciagpHyuTij' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpHyuTij.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Hyundai Tijuana </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpHyu','gpHyuMex'] %}
+                     <li class="nav-item {% if 'PermanenciagpHyuMex' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpHyuMex.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Hyundai Mexicali</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpHyu','gpHyuMaz'] %}
+                     <li class="nav-item {% if 'PermanenciagpHyuMaz' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpHyuMaz.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Hyundai Mazatlán </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpHyu'] %}
+                     <li class="nav-item {% if 'PermanenciagpHyuTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpHyuTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Hyundai General </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier','gpJagCul'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Jaguar Land Rover
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+                {% if current_user.username in ['gpremier','gpJagCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpJagCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpJagCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Jaguar Land Rover Culiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+{% if current_user.username in ['gpremier','gpKiaCab','gpKiaCdO','gpKiaCul','gpKiaHer','gpKiaLaP','gpKiaMoc','gpKia'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> KIA
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+
+                {% if current_user.username in ['gpremier','gpKia','gpKiaCab'] %}
+                     <li class="nav-item {% if 'PermanenciagpKiaCab' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpKiaCab.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> KIA Cabos</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpKia','gpKiaCdO'] %}
+                     <li class="nav-item {% if 'PermanenciagpKiaCdO' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpKiaCdO.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> KIA Cd Obregón</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpKia','gpKiaCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpKiaCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpKiaCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> KIA Culiacán</p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                {% if current_user.username in ['gpremier','gpKia','gpKiaHer'] %}
+                     <li class="nav-item {% if 'PermanenciagpKiaHer' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpKiaHer.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> KIA Hermosillo</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpKia','gpKiaLaP'] %}
+                     <li class="nav-item {% if 'PermanenciagpKiaLaP' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpKiaLaP.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> KIA La Paz</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpKia','gpKiaMoc'] %}
+                     <li class="nav-item {% if 'PermanenciagpKiaMoc' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpKiaMoc.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> KIA Mochis</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpKia'] %}
+                     <li class="nav-item {% if 'PermanenciagpKiaTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpKiaTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> KIA General</p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier','gpMerHer','gpMerCul','gpMer'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Mercedes Benz
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+
+                {% if current_user.username in ['gpremier','gpMer','gpMerHer'] %}
+                     <li class="nav-item {% if 'PermanenciagpMerHer' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpMerHer.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Mercedes-Benz Hermosillo</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpMer','gpMerCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpMerCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpMerCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Mercedes-Benz Culiacán</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpMer'] %}
+                     <li class="nav-item {% if 'PermanenciagpMerTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpMerTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Mercedes-Benz General </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+{% if current_user.username in ['gpremier','gpMinCul','gpMinMon','gpMinTot'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Mini
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+                {% if current_user.username in ['gpremier','gpMin','gpMinCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpMinCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpMinCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Mini Cooper Culiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpMin','gpMinMon'] %}
+                     <li class="nav-item {% if 'Permanenciagpmini' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpMinMon.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Mini Cooper Monterrey</p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpMin'] %}
+                     <li class="nav-item {% if 'PermanenciagpMinTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpMinTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Mini Cooper General </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier','gpPlaCul'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Planauto
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+
+                {% if current_user.username in ['gpremier','gpPlaCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpPlaCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpPlaCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Planauto Culiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+{% if current_user.username in ['gpremier','gpToy','gpToyZar','gpToyMoc','gpToyGua','gpToyCul'] %}
+ <li class="nav-item ">
+            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+
+              <p> Toyota
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="tlmap">
+              <ul class="nav">
+
+                {% if current_user.username in ['gpremier','gpToy','gpToyZar'] %}
+                     <li class="nav-item {% if 'PermanenciagpToyZar' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpToyZar.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Toyota Zaragosa </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpToy','gpToyMoc'] %}
+                     <li class="nav-item {% if 'PermanenciagpToyMoc' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpToyMoc.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Toyota Mochis </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpToy','gpToyGua'] %}
+                     <li class="nav-item {% if 'PermanenciagpToyGua' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpToyGua.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Toyota Guasave </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpToy','gpToyCul'] %}
+                     <li class="nav-item {% if 'PermanenciagpToyCul' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpToyCul.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Toyota Culiacán </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpToyMaz','gpToy'] %}
+                     <li class="nav-item {% if 'PermanenciagpToyMaz' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpToyMaz.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Toyota Mazatlán </p>
+                            </a>
+                          </li>
+                {% endif %}
+                {% if current_user.username in ['gpremier','gpToy'] %}
+                     <li class="nav-item {% if 'PermanenciagpToyTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciagpToyTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                              <p> Toyota General </p>
+                            </a>
+                          </li>
+                {% endif %}
+
+                
+       </ul>
+     </div>
+          </li>
+{% endif %}
+
+
+
+     {% if current_user.username in ['gpremier','gpAutCul','gpAutMoc','gpAut','gpHyuCul','gpHyuCab','gpHyuTij',
+'gpHyuMex','gpHyuMaz','gpHyu','gpToyZar','gpToyMoc','gpToyGua','gpToyCua','gpToyMaz','gpToy','gpKiaCab',
+'gpKiaCdO','gpKiaCul','gpKiaHer','gpKiaLaP','gpKiaMoc','gpKia','gpBmwCul','gpBmwMon','gpBmwSal','gpBmw',
+'gpGmcCul','gpGmcMoc','gpGmcMaz','gpGmc','gpCheCul','gpCheMaz','gpCheHer','gpChe','gpMerHer','gpMerCul',
+'gpMer','gpJagCul','gpCorCul','gpHinCul','gpMinCul','gpMinMon','gpPlaCul','gpMin'] %}
           <li class="nav-item ">
             <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
               <i class="material-icons">directions_run</i>
