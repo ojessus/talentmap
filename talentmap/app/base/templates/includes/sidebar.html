@@ -314,13 +314,13 @@
   -->
      {% if current_user.username in ['gpremier','gpAut'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseAut" href="#collapseAut"  >
 
               <p> Autocountry
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseAut">
               <ul class="nav">
 
                 {% if current_user.username in ['gpremier','gpAut','gpAutCul'] %}
@@ -362,13 +362,13 @@
 
 {% if current_user.username in ['gpremier','gpBmwCul','gpBmwMon','gpBmwSal','gpBmw'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseBmw" href="#collapseBmw"  >
 
               <p> BMW
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseBmw">
               <ul class="nav">
                 {% if current_user.username in ['gpremier','gpBmw','gpBmwSal'] %}
                      <li class="nav-item {% if 'PermanenciagpBMWSal' in segment %} active {% endif %} ">
@@ -420,13 +420,13 @@
 
 {% if current_user.username in ['gpremier','gpCheCul','gpCheMaz','gpCheHer','gpChe'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseChe" href="#collapseChe"  >
 
               <p> Chevrolet
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseChe">
               <ul class="nav">
 
                 {% if current_user.username in ['gpremier','gpCheCul','gpChe'] %}
@@ -478,13 +478,13 @@
 
 {% if current_user.username in ['gpremier', 'gpCorCul'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseCor" href="#collapseCor"  >
 
               <p> Corporativo
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseCor">
               <ul class="nav">
                 {% if current_user.username in ['gpremier','gpCorCul'] %}
                      <li class="nav-item {% if 'PermanenciagpCorCul' in segment %} active {% endif %} ">
@@ -505,13 +505,13 @@
 
 {% if current_user.username in ['gpremier','gpGmcCul','gpGmcMoc','gpGmcMaz','gpGmc'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseGmc" href="#collapseGmc"  >
 
               <p> GMC
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseGmc">
               <ul class="nav">
 
                 {% if current_user.username in ['gpremier','gpGmc','gpGmcCul'] %}
@@ -563,13 +563,13 @@
 
 {% if current_user.username in ['gpremier','gpHinCul'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseHin" href="#collapseHin"  >
 
               <p> Hino
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseHin">
               <ul class="nav">
 
                 {% if current_user.username in ['gpremier','gpHinCul'] %}
@@ -591,13 +591,13 @@
 
 {% if current_user.username in ['gpremier','gpHyuCul','gpHyuCab','gpHyuTij','gpHyuMex','gpHyuMaz','gpHyu'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseHyu" href="#collapseHyu"  >
 
               <p> Hyundai
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseHyu">
               <ul class="nav">
 
                 {% if current_user.username in ['gpremier','gpHyu','gpHyuCul'] %}
@@ -669,13 +669,13 @@
 
 {% if current_user.username in ['gpremier','gpJagCul'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseJag" href="#collapseJag"  >
 
               <p> Jaguar Land Rover
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseJag">
               <ul class="nav">
 
                 {% if current_user.username in ['gpremier','gpJagCul'] %}
@@ -786,13 +786,13 @@
 
 {% if current_user.username in ['gpremier','gpMerHer','gpMerCul','gpMer'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseMer" href="#collapseMer"  >
 
               <p> Mercedes Benz
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseMer">
               <ul class="nav">
 
 
