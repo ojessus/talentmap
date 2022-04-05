@@ -312,7 +312,7 @@
             </a>
           </li>
   -->
-     {% if current_user.username in ['gpremier','gpAut'] %}
+     {% if current_user.username in ['gpremier','gpAut','gpAutCul','gpAutMoc'] %}
  <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" data-target="#collapseAut" href="#collapseAut"  >
 
@@ -985,6 +985,12 @@
      </div>
           </li>
 {% endif %}
+            <li class="nav-item">
+            <a class="nav-link" href="/reportes.html">
+              <i class="material-icons">report</i>
+              <p> Entregables </p>
+            </a>
+          </li>
 
 
 
