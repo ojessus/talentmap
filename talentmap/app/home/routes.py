@@ -38,7 +38,7 @@ def index():
     elif current_user.username == 'gbimbo':
         return render_template('reportes.html', segment='reportes')
     elif current_user.username == 'gpremier':
-        return render_template('Permanenciagp.html', segment='Permanenciagp')
+        return render_template('PermanenciaTotNeg.html', segment='Permanenciagp')
     elif current_user.username == 'gptijuana':
         return render_template('Permanenciagptj.html', segment='Permanenciagptj')
     elif current_user.username == 'gphermosillo':
