@@ -312,6 +312,26 @@
             </a>
           </li>
   -->
+{% if current_user.username in ['gpremier] %}
+            <li class="nav-item {% if 'Permanenciagp' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciaTotNeg.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                    <span class="sidebar-normal"> Total Negocio </span>
+                            </a>
+                          </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/PermanenciaCli.html">
+                            <i>
+                <img src="/static/assets/icons/integraciondedatos.png" width="100%"/>
+              </i> 
+              <p>Clima y engagement</p>
+            </a>
+          </li>
+            
+{% endif %}
      {% if current_user.username in ['gpremier','gpAut','gpAutCul','gpAutMoc'] %}
  <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" data-target="#collapseAut" href="#collapseAut"  >
