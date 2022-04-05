@@ -696,13 +696,13 @@
 {% endif %}
 {% if current_user.username in ['gpremier','gpKiaCab','gpKiaCdO','gpKiaCul','gpKiaHer','gpKiaLaP','gpKiaMoc','gpKia'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseKia"  >
 
               <p> KIA
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseKia">
               <ul class="nav">
 
 
@@ -834,13 +834,13 @@
 {% endif %}
 {% if current_user.username in ['gpremier','gpMinCul','gpMinMon','gpMinTot'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseMin" href="#collapseMin"  >
 
               <p> Mini
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseMin">
               <ul class="nav">
 
                 {% if current_user.username in ['gpremier','gpMin','gpMinCul'] %}
@@ -882,13 +882,13 @@
 
 {% if current_user.username in ['gpremier','gpPlaCul'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapsePla"   >
 
               <p> Planauto
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapsePla">
               <ul class="nav">
 
 
@@ -911,13 +911,13 @@
 
 {% if current_user.username in ['gpremier','gpToy','gpToyZar','gpToyMoc','gpToyGua','gpToyCul'] %}
  <li class="nav-item ">
-            <a class="nav-link" data-toggle="collapse" href="#tlmap2"  >
+            <a class="nav-link" data-toggle="collapse" data-target="#collapseToy" href="#collapseToy"  >
 
               <p> Toyota
                 <b class="caret"></b>
               </p>
             </a>
-            <div class="collapse" id="tlmap">
+            <div class="collapse" id="collapseToy">
               <ul class="nav">
 
                 {% if current_user.username in ['gpremier','gpToy','gpToyZar'] %}
@@ -926,7 +926,6 @@
                                             <i>
                                 <img src="/static/assets/icons/rotacion.png" width="100%"/>
                               </i>
-                                <span class="sidebar-mini"> Zar </span>
                     <span class="sidebar-normal"> Toyota Zaragosa </span>
                             </a>
                           </li>
@@ -937,7 +936,6 @@
                                             <i>
                                 <img src="/static/assets/icons/rotacion.png" width="100%"/>
                               </i>
-                                <span class="sidebar-mini"> Moc </span>
                     <span class="sidebar-normal"> Toyota Mochis </span>
                             </a>
                           </li>
@@ -948,7 +946,6 @@
                                             <i>
                                 <img src="/static/assets/icons/rotacion.png" width="100%"/>
                               </i>
-                                <span class="sidebar-mini"> Gua </span>
                     <span class="sidebar-normal"> Toyota Guasave </span>
                             </a>
                           </li>
@@ -959,7 +956,6 @@
                                             <i>
                                 <img src="/static/assets/icons/rotacion.png" width="100%"/>
                               </i>
-                                <span class="sidebar-mini"> Cul </span>
                     <span class="sidebar-normal"> Toyota Culiacán </span>
                             </a>
                           </li>
@@ -970,7 +966,6 @@
                                             <i>
                                 <img src="/static/assets/icons/rotacion.png" width="100%"/>
                               </i>
-                                <span class="sidebar-mini"> Maz </span>
                     <span class="sidebar-normal"> Toyota Mazatlán </span>
                             </a>
                           </li>
@@ -981,7 +976,6 @@
                                             <i>
                                 <img src="/static/assets/icons/rotacion.png" width="100%"/>
                               </i>
-                                <span class="sidebar-mini"> Toy </span>
                     <span class="sidebar-normal"> Toyota General </span>
                             </a>
                           </li>
