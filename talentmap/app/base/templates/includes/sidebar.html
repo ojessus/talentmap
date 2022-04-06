@@ -331,6 +331,16 @@
           </li>
             
 {% endif %}
+{% if current_user.username in ['gpMar', 'gpremier'] %}
+            <li class="nav-item {% if 'PermanenciagpMarTot' in segment %} active {% endif %} ">
+                            <a class="nav-link" href="/PermanenciaMarTot.html">
+                                            <i>
+                                <img src="/static/assets/icons/rotacion.png" width="100%"/>
+                              </i>
+                    <span class="sidebar-normal"> Marketing </span>
+                            </a>
+                          </li>
+    { % endif %}
      {% if current_user.username in ['gpremier','gpAut','gpAutCul','gpAutMoc'] %}
  <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" data-target="#collapseAut" href="#collapseAut"  >
