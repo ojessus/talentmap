@@ -40,19 +40,19 @@ def index():
     elif current_user.username == 'gpremier':
         return render_template('PermanenciaTotNeg.html', segment='Permanenciagp')
     elif current_user.username == 'gptijuana':
-        return render_template('Permanenciagptj.html', segment='Permanenciagptj')
+        return render_template('PermanenciagpHyuTij.html', segment='PermanenciagpHyuTij')
     elif current_user.username == 'gphermosillo':
-        return render_template('Permanenciagpme.html', segment='Permanenciagpgpme')
+        return render_template('PermanenciagpMerHer.html', segment='PermanenciagpgMerHer')
     elif current_user.username == 'gpbmw':
-        return render_template('Permanenciagpst.html', segment='Permanenciagpgpst')
+        return render_template('PermanenciagpBMWSal.html', segment='PermanenciagpgpBMWSal')
     elif current_user.username == 'claugto':
         return render_template('irh.html', segment='irh')
     elif current_user.username == 'lmision':
         return render_template('Permanencialm.html', segment='Permanencialm')
     elif current_user.username == 'gpmazatlan':
-        return render_template('Permanenciagpmaza.html', segment='Permanenciagpmaza')
+        return render_template('PermanenciagpCheMaz.html', segment='PermanenciagpCheMaz')
     elif current_user.username == 'gpculiacan':
-        return render_template('Permanenciagpchev.html', segment='Permanenciagpchev')
+        return render_template('PermanenciagpCheCul.html', segment='PermanenciagpCheCul')
     elif current_user.username == 'gpAutCul':
         return render_template('PermanenciagpAutCul.html', segment='PermanenciagpAutCul')
     elif current_user.username == 'gpAutMoc':
