@@ -13,69 +13,6 @@
       <div class="page-categories">
         <h3 class="title text-center">Entregables</h3>
         <br>
-        <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active show" data-toggle="tab" href="#sociograma" role="tablist">
-              <i class="material-icons">store</i> Empresa
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#dash" role="tablist">
-              <i class="material-icons">people</i> Personas
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#listas" role="tablist">
-              <i class="material-icons">assignment</i> Listas
-            </a>
-          </li>
-	</ul>
-        <div class="tab-content tab-space tab-subcategories">
-          <div class="tab-pane active show" id="sociograma">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Empresa</h4>
-              </div>
-              <div class="card-body">
-		<!-- iframe kumu-->
-		<a href="static/assets/demo/Reporte_hallazgos_empresa.pdf" download>
-		<button type="button" class="btn btn-success btn-block">Reporte empresa</button>
-		</a>
-              </div>
-            </div>
-          </div>
-          
-
-	<div class="tab-pane" id="dash">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Persona</h4>
-              </div>
-              <div class="card-body">
-		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
-		<button type="button" class="btn btn-success btn-block">Reporte Juan Perez</button>
-		</a>		
-              </div>
-            </div>
-          </div>
-
-	<div class="tab-pane" id="listas">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Listas</h4>
-              </div>
-              <div class="card-body">
-		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/KAM-TOP50.xlsx" download>
-		<button type="button" class="btn btn-success btn-block">Compromiso Sustentable</button>
-		</a>		
-              </div>
-            </div>
-          </div>
-
-
-        </div>
       </div>
     </div>
  </div>
@@ -85,29 +22,319 @@
 
 <!-- lo nuevo contra lo viejo -->
 
-
-
-<div class="col-md-8 ml-auto mr-auto">
-<div id="accordion" role="tablist">
+    <!-- inicio de marca  Autocountry-->
+  {% if current_user.username in ['gpremier','gpAut', 'gpAutCul', 'gpAutMoc'] %}  
   <div class="card card-collapse">
-    <div class="card-header" role="tab" id="headingOne">
+    <div class="card-header" role="tab" id="headingAut">
       <h5 class="mb-0">
-        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h4 class="text-center">Mercedes benz</h4>
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="text-center">Autocountry</h3>
           <i class="material-icons">keyboard_arrow_down</i>
         </a>
       </h5>
     </div>
-
-    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        Este texto deberían poder verlo todos los usuarios 
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier','gpAut'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Autocountry Total Marca </h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                   
+        {% if current_user.username in ['gpremier','gpAut', 'gpAutCul'] %}             
+                   <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Autocountry Culiacan</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpAut', 'gpAutMoc'] %}          
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Autocountry Mochis</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
       </div>
     </div>
   </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    
+    
+    
+  <!-- inicio de marca-->
+  {% if current_user.username in ['gpremier','gpBmw'] %}  
+  <div class="card card-collapse">
+    <div class="card-header" role="tab" id="headingToy">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="text-center">BMW</h3>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier','gpBmw', 'gpBmwCul','gpBmwMon','gpBmwSal'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">BMW Total Marca </h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                   
+        {% if current_user.username in ['gpremier','gpBmw', 'gpBmwCul'] %}             
+                   <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">BMW Culiacan</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpBmw', 'gpBmwMon'] %}          
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">BMW Monterrey</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpBmw', 'gpBmwSal'] %}     
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">BMW Saltillo</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
+      </div>
+    </div>
+  </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    <!-- inicio de marca Chevrolet-->
+  {% if current_user.username in ['gpremier','gpChe', 'gpCheCul','gpCheMaz','gpCheHer'] %}  
+  <div class="card card-collapse">
+    <div class="card-header" role="tab" id="headingToy">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="text-center">Chevrolet</h3>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier','gpChe'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Chevrolet Total Marca </h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                   
+        {% if current_user.username in ['gpremier','gpChe', 'gpCheCul'] %}             
+                   <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Chevrolet Culiacan</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpChe','gpCheHer'] %}          
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Chevrolet Hermosillo</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpChe','gpCheMaz'] %}     
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Chevrolet Mazatlán</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
+      </div>
+    </div>
+  </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    <!-- inicio de marca  Corporativo Culiacán -->
+  {% if current_user.username in ['gpremier','gpCorCul'] %}  
+  <div class="card card-collapse">
+    <div class="card-header" role="tab" id="headingToy">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="text-center">Corporativo Culiacán</h3>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier','gpCorCul'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Corporativo Culiacán </h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
+      </div>
+    </div>
+  </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    <!-- inicio de marca GMC-->
   {% if current_user.username in ['gpremier','gpToy'] %}  
   <div class="card card-collapse">
-    <div class="card-header" role="tab" id="headingTwo">
+    <div class="card-header" role="tab" id="headingToy">
       <h5 class="mb-0">
         <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           <h3 class="text-center">Toyota</h3>
@@ -120,7 +347,7 @@
           <!--<div class="col-md-12"> -->
                <ul class="nav flex-column nav-pills" role="tablist">
             <ul class="nav flex-column">       
-          
+        {% if current_user.username in ['gpremier','gpToy'] %}    
                 <div class="tab-pane" id="dash">
                        <div class="card">
                            <div class="card-header">
@@ -134,13 +361,14 @@
                     </div>
                     </div>
                     </div>
+                {% endif %}  
                    
                    
-                   
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyCul'] %}             
                    <div class="tab-pane" id="dash">
                        <div class="card">
                            <div class="card-header">
-                               <h5 class="card-title">Toyota Culiacan</h5>
+                               <h5 class="card-title text-center">Toyota Culiacan</h5>
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
@@ -150,11 +378,13 @@
                     </div>
                     </div>
                     </div>
-              
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyGua'] %}          
               <div class="tab-pane" id="dash">
                        <div class="card">
                            <div class="card-header">
-                               <h5 class="card-title">Toyota Guasave</h5>
+                               <h5 class="card-title text-center">Toyota Guasave</h5>
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
@@ -164,11 +394,13 @@
                     </div>
                     </div>
                     </div>
-              
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMaz'] %}     
               <div class="tab-pane" id="dash">
                        <div class="card">
                            <div class="card-header">
-                               <h5 class="card-title">Toyota Mazatlán</h5>
+                               <h5 class="card-title text-center">Toyota Mazatlán</h5>
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
@@ -178,11 +410,13 @@
                     </div>
                     </div>
                     </div>
+                {% endif %}  
                 
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMoc'] %}     
                 <div class="tab-pane" id="dash">
                        <div class="card">
                            <div class="card-header">
-                               <h5 class="card-title">Toyota Mochis</h5>
+                               <h5 class="card-title text-center">Toyota Mochis</h5>
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
@@ -192,11 +426,13 @@
                     </div>
                     </div>
                     </div>
-                
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyZar'] %}  
                 <div class="tab-pane" id="dash">
                        <div class="card">
                            <div class="card-header">
-                               <h5 class="card-title">Toyota Zaragoza</h5>
+                               <h5 class="card-title text-center">Toyota Zaragoza</h5>
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
@@ -206,6 +442,7 @@
                     </div>
                     </div>
                     </div>
+                {% endif %}  
                    
                  </ul>
               </ul>
@@ -215,21 +452,506 @@
     </div>
   </div>
     {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    <!-- inicio de marca-->
+  {% if current_user.username in ['gpremier','gpToy'] %}  
   <div class="card card-collapse">
-    <div class="card-header" role="tab" id="headingThree">
+    <div class="card-header" role="tab" id="headingToy">
       <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Descargables de Ford
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="text-center">Toyota</h3>
           <i class="material-icons">keyboard_arrow_down</i>
         </a>
       </h5>
     </div>
-    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier','gpToy'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Total Marca </h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                   
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyCul'] %}             
+                   <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Culiacan</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyGua'] %}          
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Guasave</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMaz'] %}     
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Mazatlán</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMoc'] %}     
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Mochis</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyZar'] %}  
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Zaragoza</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
       </div>
     </div>
   </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    <!-- inicio de marca-->
+  {% if current_user.username in ['gpremier','gpToy'] %}  
+  <div class="card card-collapse">
+    <div class="card-header" role="tab" id="headingToy">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="text-center">Toyota</h3>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier','gpToy'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Total Marca </h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                   
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyCul'] %}             
+                   <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Culiacan</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyGua'] %}          
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Guasave</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMaz'] %}     
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Mazatlán</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMoc'] %}     
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Mochis</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyZar'] %}  
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Zaragoza</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
+      </div>
+    </div>
+  </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    <!-- inicio de marca-->
+  {% if current_user.username in ['gpremier','gpToy'] %}  
+  <div class="card card-collapse">
+    <div class="card-header" role="tab" id="headingToy">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="text-center">Toyota</h3>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier','gpToy'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Total Marca </h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                   
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyCul'] %}             
+                   <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Culiacan</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyGua'] %}          
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Guasave</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMaz'] %}     
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Mazatlán</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMoc'] %}     
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Mochis</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyZar'] %}  
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Zaragoza</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
+      </div>
+    </div>
+  </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    <!-- inicio de marca-->
+  {% if current_user.username in ['gpremier','gpToy'] %}  
+  <div class="card card-collapse">
+    <div class="card-header" role="tab" id="headingToy">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h3 class="text-center">Toyota</h3>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier','gpToy'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Total Marca </h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                   
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyCul'] %}             
+                   <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Culiacan</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyGua'] %}          
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Guasave</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMaz'] %}     
+              <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Mazatlán</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyMoc'] %}     
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Mochis</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+        
+        {% if current_user.username in ['gpremier','gpToy', 'gpToyZar'] %}  
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Toyota Zaragoza</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
+      </div>
+    </div>
+  </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+    
+    <!-- fin del colapsable-->
 </div>
     </div>
 
