@@ -79,13 +79,21 @@
       </div>
     </div>
  </div>
+
+
+
+
 <!-- lo nuevo contra lo viejo -->
+
+
+
+<div class="col-md-10 ml-auto mr-auto">
 <div id="accordion" role="tablist">
   <div class="card card-collapse">
     <div class="card-header" role="tab" id="headingOne">
       <h5 class="mb-0">
         <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
+          Descargables de Mercedes benz #1
           <i class="material-icons">keyboard_arrow_down</i>
         </a>
       </h5>
@@ -102,7 +110,7 @@
     <div class="card-header" role="tab" id="headingTwo">
       <h5 class="mb-0">
         <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
+          Descargables de Toyota
           <i class="material-icons">keyboard_arrow_down</i>
         </a>
       </h5>
@@ -110,6 +118,19 @@
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
         Este texto solamente debería poder verlo el jefe y el de Toyota total. 
+          <div class="tab-pane active show" id="sociograma">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Descargable Toyota</h4>
+              </div>
+              <div class="card-body">
+		<!-- iframe kumu-->
+		<a href="static/assets/demo/Reporte_hallazgos_empresa.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Reporte empresa</button>
+		</a>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
@@ -118,7 +139,7 @@
     <div class="card-header" role="tab" id="headingThree">
       <h5 class="mb-0">
         <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
+          Descargables de Ford
           <i class="material-icons">keyboard_arrow_down</i>
         </a>
       </h5>
@@ -130,6 +151,7 @@
     </div>
   </div>
 </div>
+    </div>
 
 {% endblock content %}
 
