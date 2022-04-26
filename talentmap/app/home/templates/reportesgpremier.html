@@ -22,6 +22,49 @@
 
 <!-- lo nuevo contra lo viejo -->
 
+<!-- inicio de marca Total Negocio-->
+  {% if current_user.username in ['gpremier'] %}  
+  <div class="card card-collapse">
+    <div class="card-header" role="tab" id="headingTotE">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTotE" aria-expanded="false" aria-controls="collapseTotE">
+          <h3 class="text-center">Total Negocio</h3>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTotE" class="collapse" role="tabpanel" aria-labelledby="headingTotE" data-parent="#accordion">
+      <div class="card-body">          
+          <!--<div class="col-md-12"> -->
+               <ul class="nav flex-column nav-pills" role="tablist">
+            <ul class="nav flex-column">       
+        {% if current_user.username in ['gpremier'] %}    
+                <div class="tab-pane" id="dash">
+                       <div class="card">
+                           <div class="card-header">
+                               <h5 class="card-title text-center">Total Negocio</h5>
+                           </div>
+                           <div class="card-body">
+		<!-- iframe Powe bi-->
+		<a href="static/assets/gpremier/Reporte_Total_Negocio_Abr2022.pdf" download>
+		<button type="button" class="btn btn-success btn-block">Descargar</button>
+		</a>		
+                    </div>
+                    </div>
+                    </div>
+                {% endif %}  
+                   
+                 </ul>
+              </ul>
+          <!--</div>-->
+          
+      </div>
+    </div>
+  </div>
+    {% endif %}
+    
+    <!-- Fin de marca-->
+
     <!-- inicio de marca  Autocountry-->
   {% if current_user.username in ['gpremier','gpAut', 'gpAutCul', 'gpAutMoc'] %}  
   <div class="card card-collapse">
@@ -46,7 +89,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_Autocountry_General_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -63,7 +106,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -79,7 +122,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -126,7 +169,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_BMW_General_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -143,7 +186,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -159,7 +202,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -175,7 +218,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -218,7 +261,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_Chevrolet_General_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -235,7 +278,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -251,7 +294,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_Chevrolet_Hermosillo_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -267,7 +310,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_Chevrolet_Mazatlan_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -311,7 +354,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -355,7 +398,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_GMC_General_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -372,7 +415,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -388,7 +431,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -404,7 +447,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -447,7 +490,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_GMC_General_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -492,7 +535,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -509,7 +552,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -525,7 +568,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -541,7 +584,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -557,7 +600,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -573,7 +616,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -616,7 +659,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_Jaguar_Land_Rover_Culiacan_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -660,7 +703,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_KIA_General_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -677,7 +720,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -693,7 +736,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -709,7 +752,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -725,7 +768,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -741,7 +784,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -757,7 +800,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_KIA_Mochis_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -802,7 +845,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -819,7 +862,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -835,7 +878,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -879,7 +922,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -896,7 +939,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -912,7 +955,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -955,7 +998,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -998,7 +1041,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -1015,7 +1058,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -1031,7 +1074,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="static/assets/gpremier/Reporte_Toyota_Mochis_Abr2022.pdf" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -1047,7 +1090,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -1063,7 +1106,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
@@ -1079,7 +1122,7 @@
                            </div>
                            <div class="card-body">
 		<!-- iframe Powe bi-->
-		<a href="static/assets/demo/reporte_individual_Juan_Perez_demo.pdf" download>
+		<a href="#" download>
 		<button type="button" class="btn btn-success btn-block">Descargar</button>
 		</a>		
                     </div>
