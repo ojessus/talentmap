@@ -63,7 +63,7 @@ def index():
         return render_template('PermanenciagpHyuCul.html', segment='PermanenciagpHyuCul')
     elif current_user.username == 'gpHyuCab':
         return render_template('PermanenciagpHyuCab.html', segment='PermanenciagpHyuCab')
-    elif current_user.username == 'gpHyuTij':
+    elif current_user.username in [ 'gpHyuTij','gptijuana']:
         return render_template('PermanenciagpHyuTij.html', segment='PermanenciagpHyuTij')
     elif current_user.username == 'gpHyuMex':
         return render_template('PermanenciagpHyuMex.html', segment='PermanenciagpHyuMex')
@@ -101,7 +101,7 @@ def index():
         return render_template('PermanenciagpBMWCul.html', segment='PermanenciagpBMWCul')
     elif current_user.username == 'gpBmwMon':
         return render_template('PermanenciagpBMWMon.html', segment='PermanenciagpBMWMon')
-    elif current_user.username == 'gpBmwSal':
+    elif current_user.username in ['gpBmwSal','gpbmw']:
         return render_template('PermanenciagpBMWSal.html', segment='PermanenciagpBMWSal')
     elif current_user.username == 'gpBmw':
         return render_template('PermanenciagpBMWTot.html', segment='PermanenciagpBMWTot')
@@ -113,15 +113,15 @@ def index():
         return render_template('PermanenciagpGMCMaz.html', segment='PermanenciagpGMCMaz')
     elif current_user.username == 'gpGmc':
         return render_template('PermanenciagpGMCTot.html', segment='PermanenciagpGMCTot')
-    elif current_user.username == 'gpCheCul':
+    elif current_user.username in ['gpCheCul','gpculiacan']:
         return render_template('PermanenciagpCheCul.html', segment='PermanenciagpCheCul')
-    elif current_user.username == 'gpCheMaz':
+    elif current_user.username in ['gpCheMaz','gpmazatlan']:
         return render_template('PermanenciagpCheMaz.html', segment='PermanenciagpCheMaz')
     elif current_user.username == 'gpCheHer':
         return render_template('PermanenciagpCheHer.html', segment='PermanenciagpCheHer')
     elif current_user.username == 'gpCheTot':
         return render_template('PermanenciagpCheTot.html', segment='PermanenciagpCheTot')
-    elif current_user.username == 'gpMerHer':
+    elif current_user.username in [ 'gpMerHer','gphermosillo']:
         return render_template('PermanenciagpMerHer.html', segment='PermanenciagpMerHer')
     elif current_user.username == 'gpMerCul':
         return render_template('PermanenciagpMerCul.html', segment='PermanenciagpMerCul')
