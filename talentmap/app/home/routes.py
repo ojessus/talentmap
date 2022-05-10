@@ -105,13 +105,13 @@ def index():
         return render_template('PermanenciagpBMWSal.html', segment='PermanenciagpBMWSal')
     elif current_user.username == 'gpBmw':
         return render_template('PermanenciagpBMWTot.html', segment='PermanenciagpBMWTot')
-    elif current_user.username == 'gpGMCCul':
+    elif current_user.username == 'gpGmcCul':
         return render_template('PermanenciagpGMCCul.html', segment='PermanenciagpGMCCul')
-    elif current_user.username == 'gpGMCMoc':
+    elif current_user.username == 'gpGmcMoc':
         return render_template('PermanenciagpGMCMoc.html', segment='PermanenciagpGMCMoc')
-    elif current_user.username == 'gpGMCMaz':
+    elif current_user.username == 'gpGmcMaz':
         return render_template('PermanenciagpGMCMaz.html', segment='PermanenciagpGMCMaz')
-    elif current_user.username == 'gpGMC':
+    elif current_user.username == 'gpGmc':
         return render_template('PermanenciagpGMCTot.html', segment='PermanenciagpGMCTot')
     elif current_user.username == 'gpCheCul':
         return render_template('PermanenciagpCheCul.html', segment='PermanenciagpCheCul')
