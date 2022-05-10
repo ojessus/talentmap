@@ -142,7 +142,7 @@ def index():
     elif current_user.username == 'gpMinTot':
         return render_template('PermanenciagpMinTot.html', segment='PermanenciagpMinTot')
     elif current_user.username == 'gpMar':
-        return render_template('PermanenciagpMarTot.html', segment='PermanenciagpMarTot')
+        return render_template('PermanenciaMarTot.html', segment='PermanenciagpMarTot')
     elif current_user.username == 'autozone':
         return render_template('bi.html', segment='colaboracion')
     elif current_user.username == 'axoguest':
