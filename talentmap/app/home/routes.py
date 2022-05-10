@@ -125,7 +125,7 @@ def index():
         return render_template('PermanenciagpMerHer.html', segment='PermanenciagpMerHer')
     elif current_user.username == 'gpMerCul':
         return render_template('PermanenciagpMerCul.html', segment='PermanenciagpMerCul')
-    elif current_user.username == 'gpMerTot':
+    elif current_user.username == 'gpMer':
         return render_template('PermanenciagpMerTot.html', segment='PermanenciagpMerTot')
     elif current_user.username == 'gpJagCul':
         return render_template('PermanenciagpJagCul.html', segment='PermanenciagpJagCul')
