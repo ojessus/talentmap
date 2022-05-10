@@ -57,7 +57,7 @@ def index():
         return render_template('PermanenciagpAutCul.html', segment='PermanenciagpAutCul')
     elif current_user.username == 'gpAutMoc':
         return render_template('PermanenciagpAutMoc.html', segment='PermanenciagpAutMoc')
-    elif current_user.username == 'gpAutTot':
+    elif current_user.username == 'gpAut':
         return render_template('PermanenciagpAutTot.html', segment='PermanenciagpAutTot')
     elif current_user.username == 'gpHyuCul':
         return render_template('PermanenciagpHyuCul.html', segment='PermanenciagpHyuCul')
@@ -69,7 +69,7 @@ def index():
         return render_template('PermanenciagpHyuMex.html', segment='PermanenciagpHyuMex')
     elif current_user.username == 'gpHyuMaz':
         return render_template('PermanenciagpHyuMaz.html', segment='PermanenciagpHyuMaz')
-    elif current_user.username == 'gpHyuTot':
+    elif current_user.username == 'gpHyu':
         return render_template('PermanenciagpHyuTot.html', segment='PermanenciagpHyuTot')
     elif current_user.username == 'gpToyZar':
         return render_template('PermanenciagpToyZar.html', segment='PermanenciagpToyZar')
@@ -77,8 +77,8 @@ def index():
         return render_template('PermanenciagpToyMoc.html', segment='PermanenciagpToyMoc')
     elif current_user.username == 'gpToyGua':
         return render_template('PermanenciagpToyGua.html', segment='PermanenciagpToyGua')
-    elif current_user.username == 'gpToyCua':
-        return render_template('PermanenciagpToyCua.html', segment='PermanenciagpToyCua')
+    elif current_user.username in ['gpToyCul','gpToyCua']:
+        return render_template('PermanenciagpToyCul.html', segment='PermanenciagpToyCul')
     elif current_user.username == 'gpToyMaz':
         return render_template('PermanenciagpToyMaz.html', segment='PermanenciagpToyMaz')
     elif current_user.username == 'gpToy':
@@ -95,15 +95,15 @@ def index():
         return render_template('PermanenciagpKiaLaP.html', segment='PermanenciagpKiaLaP')
     elif current_user.username == 'gpKiaMoc':
         return render_template('PermanenciagpKiaMoc.html', segment='PermanenciagpKiaMoc')
-    elif current_user.username == 'gpKiaTot':
+    elif current_user.username == 'gpKia':
         return render_template('PermanenciagpKiaTot.html', segment='PermanenciagpKiaTot')
-    elif current_user.username == 'gpBMWCul':
+    elif current_user.username == 'gpBmwCul':
         return render_template('PermanenciagpBMWCul.html', segment='PermanenciagpBMWCul')
-    elif current_user.username == 'gpBMWMon':
+    elif current_user.username == 'gpBmwMon':
         return render_template('PermanenciagpBMWMon.html', segment='PermanenciagpBMWMon')
-    elif current_user.username == 'gpBMWSal':
+    elif current_user.username == 'gpBmwSal':
         return render_template('PermanenciagpBMWSal.html', segment='PermanenciagpBMWSal')
-    elif current_user.username == 'gpBMWTot':
+    elif current_user.username == 'gpBmw':
         return render_template('PermanenciagpBMWTot.html', segment='PermanenciagpBMWTot')
     elif current_user.username == 'gpGMCCul':
         return render_template('PermanenciagpGMCCul.html', segment='PermanenciagpGMCCul')
@@ -111,7 +111,7 @@ def index():
         return render_template('PermanenciagpGMCMoc.html', segment='PermanenciagpGMCMoc')
     elif current_user.username == 'gpGMCMaz':
         return render_template('PermanenciagpGMCMaz.html', segment='PermanenciagpGMCMaz')
-    elif current_user.username == 'gpGMCTot':
+    elif current_user.username == 'gpGMC':
         return render_template('PermanenciagpGMCTot.html', segment='PermanenciagpGMCTot')
     elif current_user.username == 'gpCheCul':
         return render_template('PermanenciagpCheCul.html', segment='PermanenciagpCheCul')
@@ -135,7 +135,7 @@ def index():
         return render_template('PermanenciagpHinCul.html', segment='PermanenciagpHinCul')
     elif current_user.username == 'gpMinCul':
         return render_template('PermanenciagpMinCul.html', segment='PermanenciagpMinCul')
-    elif current_user.username == 'gpMinMon':
+    elif current_user.username in ['gpMinMon','gpMin']:
         return render_template('PermanenciagpMinMon.html', segment='PermanenciagpMinMon')
     elif current_user.username == 'gpPlaCul':
         return render_template('PermanenciagpPlaCul.html', segment='PermanenciagpPlaCul')

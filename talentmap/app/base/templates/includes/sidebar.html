@@ -260,9 +260,9 @@
 {% elif current_user.username in ['gpremier','gpAutCul','gpAutMoc','gpAut','gpHyuCul','gpHyuCab','gpHyuTij',
 'gpHyuMex','gpHyuMaz','gpHyu','gpToyZar','gpToyMoc','gpToyGua','gpToyCua','gpToyMaz','gpToy','gpKiaCab',
 'gpKiaCdO','gpKiaCul','gpKiaHer','gpKiaLaP','gpKiaMoc','gpKia','gpBmwCul','gpBmwMon','gpBmwSal','gpBmw',
-'gpGmcCul','gpGmcMoc','gpGmcMaz','gpGmc','gpCheCul','gpCheMaz','gpCheHer','gpChe','gpMerHer','gpMerCul',
+'gpGmcCul','gpGmcMoc','gpGmcMaz','gpGmc','gpCheCul','gpCheMaz','gpCheHer','gpCheTot','gpMerHer','gpMerCul',
 'gpMer','gpJagCul','gpCorCul','gpHinCul','gpMinCul','gpMinMon','gpPlaCul','gpMin','gpbmw','gpculiacan',
-'gpmazatlan','gphermosillo','gptijuana','gpMar'] %}
+'gpmazatlan','gphermosillo','gptijuana','gpMar','gpToyCul'] %}
     <div class="sidebar" data-color="rose" data-background-color="black" data-image="/static/assets/img/side1.png">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -447,7 +447,7 @@
           </li>
 {% endif %}
 
-{% if current_user.username in ['gpremier','gpCheCul','gpCheMaz','gpCheHer','gpChe','gpculiacan','gpmazatlan'] %}
+{% if current_user.username in ['gpremier','gpCheCul','gpCheMaz','gpCheHer','gpCheTot','gpculiacan','gpmazatlan'] %}
  <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" data-target="#collapseChe" href="#collapseChe"  >
 
@@ -458,7 +458,7 @@
             <div class="collapse" id="collapseChe">
               <ul class="nav">
 
-                {% if current_user.username in ['gpremier','gpCheCul','gpChe','gpculiacan'] %}
+                {% if current_user.username in ['gpremier','gpCheCul','gpCheTot','gpculiacan'] %}
                      <li class="nav-item {% if 'PermanenciagpCheCul' in segment %} active {% endif %} ">
                             <a class="nav-link" href="/PermanenciagpCheCul.html">
                                             <i>
@@ -468,7 +468,7 @@
                             </a>
                           </li>
                 {% endif %}
-                {% if current_user.username in ['gpremier','gpChe','gpCheMaz','gpmazatlan'] %}
+                {% if current_user.username in ['gpremier','gpCheTot','gpCheMaz','gpmazatlan'] %}
                            <li class="nav-item {% if 'PermanenciagpCheMaz' in segment %} active {% endif %} ">
                        <a class="nav-link" href="/PermanenciagpCheMaz.html">
                          <i>
@@ -478,7 +478,7 @@
                      </a>
                      </li>
                 {% endif %}
-                {% if current_user.username in ['gpremier','gpCheHer','gpChe'] %}
+                {% if current_user.username in ['gpremier','gpCheHer','gpCheTot'] %}
                            <li class="nav-item {% if 'PermanenciagpCheHer' in segment %} active {% endif %} ">
                        <a class="nav-link" href="/PermanenciagpCheHer.html">
                          <i>
@@ -488,7 +488,7 @@
                      </a>
                      </li>
                 {% endif %}
-                {% if current_user.username in ['gpremier','gpChe'] %}
+                {% if current_user.username in ['gpremier','gpCheTot'] %}
                            <li class="nav-item {% if 'PermanenciagpCheTot' in segment %} active {% endif %} ">
                        <a class="nav-link" href="/PermanenciagpCheTot.html">
                          <i>
@@ -938,7 +938,7 @@
           </li>
 {% endif %}
 
-{% if current_user.username in ['gpremier','gpToy','gpToyZar','gpToyMoc','gpToyGua','gpToyCul'] %}
+{% if current_user.username in ['gpremier','gpToy','gpToyZar','gpToyMoc','gpToyGua','gpToyCul','gpToyCua'] %}
  <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" data-target="#collapseToy" href="#collapseToy"  >
 
@@ -979,7 +979,7 @@
                             </a>
                           </li>
                 {% endif %}
-                {% if current_user.username in ['gpremier','gpToy','gpToyCul'] %}
+                {% if current_user.username in ['gpremier','gpToy','gpToyCul','gpToyCua'] %}
                      <li class="nav-item {% if 'PermanenciagpToyCul' in segment %} active {% endif %} ">
                             <a class="nav-link" href="/PermanenciagpToyCul.html">
                                             <i>
@@ -1026,8 +1026,8 @@
      {% if current_user.username in ['gpremier','gpAutCul','gpAutMoc','gpAut','gpHyuCul','gpHyuCab','gpHyuTij',
 'gpHyuMex','gpHyuMaz','gpHyu','gpToyZar','gpToyMoc','gpToyGua','gpToyCua','gpToyMaz','gpToy','gpKiaCab',
 'gpKiaCdO','gpKiaCul','gpKiaHer','gpKiaLaP','gpKiaMoc','gpKia','gpBmwCul','gpBmwMon','gpBmwSal','gpBmw',
-'gpGmcCul','gpGmcMoc','gpGmcMaz','gpGmc','gpCheCul','gpCheMaz','gpCheHer','gpChe','gpMerHer','gpMerCul',
-'gpMer','gpJagCul','gpCorCul','gpHinCul','gpMinCul','gpMinMon','gpPlaCul','gpMin','gpMar'] %}
+'gpGmcCul','gpGmcMoc','gpGmcMaz','gpGmc','gpCheCul','gpCheMaz','gpCheHer','gpCheTot','gpMerHer','gpMerCul',
+'gpMer','gpJagCul','gpCorCul','gpHinCul','gpMinCul','gpMinMon','gpPlaCul','gpMin','gpMar','gpToyCul'] %}
           <li class="nav-item ">
             <a class="nav-link" href={{ url_for('base_blueprint.logout') }} >
               <i class="material-icons">directions_run</i>
